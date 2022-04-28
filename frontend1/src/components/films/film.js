@@ -9,7 +9,7 @@ class Film extends Component {
         return (
             <div className='oneFilmBlock'>
                 <div className='oneFilmText'>
-                {item.id}. {item.name}
+                {item.title}. {item.image}
                     {/* {item.id}. {item.title} - {item.completed} */}
                 </div>
                 
