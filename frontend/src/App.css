@@ -1,0 +1,254 @@
+.App {
+  text-align: center;
+}
+
+.takflixText{
+
+  left: 1.36%;
+  right: 84.69%;
+  top: 5.83%;
+  bottom: 5.85%;
+
+  background: #FFFFFF;
+}
+.offlineText{
+
+  left: 1.36%;
+  right: 84.69%;
+  top: 5.83%;
+  bottom: 5.85%;
+
+  background: #FFFFFF;
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.containerGrid{
+  font-size: 30px;
+  display: grid;
+  grid-template-rows: 70px 1fr 120px;
+  /*grid-template-rows: 120px 1000px 120px;*/
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "center"
+    "footer";
+
+  height: 100%;
+  width: 100%;
+  align-items: start;
+}
+
+.item1{
+  grid-area: header;
+  align-self: start;
+
+}
+.item2{
+  grid-area: center;
+  align-self: stretch;
+}
+.item3{
+  grid-area: footer;
+  align-self: end;
+}
+
+
+
+
+/* Хедер сайту */
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  outline: none;
+  transition: .4s ease-in-out;
+}
+
+.topmenu {
+  /* background-color: black; */
+  background-color: #00001A;
+}
+
+.topmenu > li {
+  display: inline-block;
+  position: relative;
+}
+
+.topmenu > li > a {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 16px;
+  height: 70px;
+  line-height: 70px;
+  padding: 0 30px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+.down:after {
+  /* content: "\f107"; */
+  margin-left: 8px;
+  /*font-family: "Times New Roman";*/
+  z-index: 35;
+}
+
+.topmenu li a:hover { color: #8E36EC; }
+
+.submenu {
+  background: white;
+  border: 2px solid #003559;
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 35;
+  width: 150px;
+  transform: perspective(600px) rotateX(-90deg);
+  transform-origin: 0% 0%;
+  transition: .6s ease-in-out;
+}
+.topmenu > li:hover .submenu{
+  visibility: visible;
+  opacity: 1;
+  transform: perspective(600px) rotateX(0deg);
+}
+.submenu li a {
+  color: black;
+  font-size: 13px;
+  line-height: 36px;
+  padding: 0 25px;
+  font-family: 'Kurale', serif;
+}
+
+#BT {
+  padding-left: 700px;
+}
+
+.text-2 b u {
+  font-size: 24px;
+}
+
+
+
+/*Пошук*/
+
+.container-out {
+  font-family: "Fira Sans", sans-serif;
+  padding: 18px 0;
+  border-color: floralwhite;
+  border: 3px;
+}
+
+.container-in {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.search-container {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px;
+  width: 400px;
+}
+
+.search_text{
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 20px;
+  position: absolute;
+}
+
+#search-input {
+  width: 90%;
+  padding: 13px;
+  border-radius: 4px;
+  border: 2px solid black;
+  font-size: 15px;
+}
+
+#search-input:focus {
+  outline: none;
+}
+
+#search-results {
+  position: absolute;
+  z-index: 20;
+  margin: 1px auto;
+  background: white;
+  width: 90%;
+  text-align: left;
+  border-radius: 1px;
+  border: 2px solid black;
+  display: none;
+}
+.img_search {
+  border-radius: 4px;
+  padding: 5px;
+  width: 25%;
+}
+.search-item {
+  color: white;
+  cursor: pointer;
+}
+.search-item p {
+  margin: 0;
+  padding: 10px;
+}
+.search-item:hover {
+  background: #7635e2;
+}
+#search-data {
+  margin-top: 10px;
+  color: white;
+}
+#search-data p {
+  margin: 0;
+  padding: 12px;
+  font-size: 16px;
+}
+/*Пошук кінець */
+/* Хедер сайту кінець */

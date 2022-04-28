@@ -1,0 +1,13 @@
+.oneFilmBlock{
+    display: block;
+    height: 200px;
+    border-bottom: solid #8E36EC;
+    
+
+}
+
+.oneFilmText{
+
+    color: white;
+    margin-left: 20px;
+}
