@@ -1,6 +1,6 @@
 export default class FilmService {
     url = "https://jsonplaceholder.typicode.com/todos";
-    url2 = "localhost:8800/api//movies/";
+    url2 = "localhost:8800/api/movies";
 
 
     async films2() {

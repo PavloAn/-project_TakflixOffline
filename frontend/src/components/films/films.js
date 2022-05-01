@@ -48,7 +48,7 @@ class Films extends Component {
 
 
     async componentDidMount() {
-        let films = await this.filmService.films2();
+        let films = await this.filmService.films();
         this.setState({films: films})
     }
 
