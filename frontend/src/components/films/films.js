@@ -48,7 +48,7 @@ class Films extends Component {
 
 
     async componentDidMount() {
-        let films = await this.filmService.films2();
+        let films = await this.filmService.films3();
         
         this.setState({films: films})
     }
@@ -60,7 +60,7 @@ class Films extends Component {
 
         return (
             <div className='back'>
-                
+                {films.title}. {films.image}
                 {
                     films.map(value => <Film item={value} key={value.id}/>)
                 }
