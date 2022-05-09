@@ -1,33 +1,63 @@
 import React, { Component } from "react";
-
-// class Login extends Component {
-//     render() {
-//         return (
-//             <div>
-//                 <h2>Login</h2>
-//             </div>
-//         )
-//     }
-// }
+import { Routes, Route, Link, Outlet } from 'react-router-dom';
+import Afisha from "../afisha/afisha";
+import AfishaFilm from "../afisha/afishaFilm";
+import FullAfishaFilm from "../afisha/fullAfishaFilm";
 
 
-// export default Login;
+class Login extends Component {
+    render() {
+        return (
+            <div>
+                <Link to='/'>
+
+                </Link>
+
+                {/* <Link to='/afisha/:id'>
+                    Контакти
+                </Link> */}
+
+                {/* <Routes> */}
 
 
-// function Login() {
-//     return <h2>Login</h2>
-// }
+                    <Outlet/>
 
-// export default Login;
+                        {/* <Route 
+                            path='/' 
+                            element={ <Afisha/> } 
+                        />
+                            
 
 
+                        <Route
+                            path='/:id'
+                            element = { <FullAfishaFilm/> } 
+                        />  
 
-const Login = () => {
-    return (
-        <div>
-            <h2>Login</h2>
-        </div>
-    )
+                        <Route
+                            path="*"
+                            element = { <FullAfishaFilm/> } 
+                        /> */}
+  
+                {/* </Routes> */}
+            </div>
+        )
+    }
 }
 
+
 export default Login;
+
+
+
+
+
+// const Login = () => {
+//     return (
+//         <div>
+//             <h2>Login</h2>
+//         </div>
+//     )
+// }
+
+// export default Login;

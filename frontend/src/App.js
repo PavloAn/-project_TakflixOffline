@@ -8,7 +8,8 @@ import Contacts from './components/contacts/contacts';
 import Login from './components/login/login';
 import Main from './components/main/main';
 import { ReactComponent as Logo } from './images/TAKFLIX_logo.svg';
-
+import { FullAfishaFilm } from './components/afisha/fullAfishaFilm';
+import Afisha from './components/afisha/afisha';
 
 class App extends Component {
 //function App() {
@@ -86,11 +87,7 @@ class App extends Component {
                               </li>
                             */}
 
-                            <li>
-                                <div>
-                                    <Logo/>
-                                </div> 
-                            </li>
+
 
                           </ul>
                       </nav>
@@ -109,15 +106,30 @@ class App extends Component {
                           />  
   
                           <Route
-                            path='/films'
+                            path='/films/'
                             element = { <Films/> }
                             // element = { <FullFilm/> }
                           />  
   
-                          <Route
-                            path='/login'
-                            element = { <Login/> } 
-                          />  
+                          <Route path='/login/' element = { <Login/> }>  
+
+                              <Route 
+                                index 
+                                element={ <Afisha/> } 
+                              />
+
+                              <Route 
+                                path='*' 
+                                element={ <Afisha/> } 
+                              />                        
+
+                              <Route
+                                path=':id'
+                                element = { <FullAfishaFilm/> } 
+                              />  
+
+                          </Route>
+
 
                           {/* <Route
                             path='/full-user'

@@ -24,13 +24,24 @@ export default class FilmService {
             
     }
 
+
+    request = new Request("http://localhost:8800/api/movies", {
+        mode: 'no-cors',
+    });
+
+    async films3() {
+        return await fetch(this.request)
+            .then(value => value.json())
+    }
+
+
     async films2() {
         return await fetch(this.url2)
             .then(value => value.json())
     }
 
 
-    async films() {
+    async films1() {
         return await fetch(this.url)
             .then(value => value.json())
     }
