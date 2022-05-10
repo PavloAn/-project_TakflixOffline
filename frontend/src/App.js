@@ -2,6 +2,7 @@ import './App.css';
 import React, {Component} from "react";
 import { Routes, Route, Link } from 'react-router-dom';
 
+
 import Films from './components/films/films';
 //import AboutUs from './components/aboutUs/aboutUs';
 import Contacts from './components/contacts/contacts';
@@ -10,6 +11,7 @@ import Main from './components/main/main';
 import { ReactComponent as Logo } from './images/TAKFLIX_logo.svg';
 import { FullAfishaFilm } from './components/afisha/fullAfishaFilm';
 import Afisha from './components/afisha/afisha';
+import AboutUs from './components/aboutUs/aboutUs';
 
 class App extends Component {
 //function App() {
@@ -102,7 +104,7 @@ class App extends Component {
                           
                           <Route
                             path='/contacts'
-                            element = { <Contacts/> } 
+                            element = { <AboutUs/> } 
                           />  
   
                           <Route
