@@ -9,37 +9,19 @@ class Login extends Component {
     render() {
         return (
             <div>
-                <Link to='/'>
+
+                <h2>LOGIN</h2>
+
+
+
+                {/* <Link to='/'>
 
                 </Link>
 
-                {/* <Link to='/afisha/:id'>
-                    Контакти
-                </Link> */}
-
-                {/* <Routes> */}
+                <Outlet/> */}
 
 
-                    <Outlet/>
-
-                        {/* <Route 
-                            path='/' 
-                            element={ <Afisha/> } 
-                        />
-                            
-
-
-                        <Route
-                            path='/:id'
-                            element = { <FullAfishaFilm/> } 
-                        />  
-
-                        <Route
-                            path="*"
-                            element = { <FullAfishaFilm/> } 
-                        /> */}
-  
-                {/* </Routes> */}
+            
             </div>
         )
     }

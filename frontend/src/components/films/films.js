@@ -1,3 +1,34 @@
+import React, { Component } from "react";
+import { Routes, Route, Link, Outlet } from 'react-router-dom';
+import Afisha from "../afisha/afisha";
+import AfishaFilm from "../afisha/afishaFilm";
+import { FullAfishaFilm } from "../afisha/fullAfishaFilm";
+
+
+
+class Films extends Component {
+    render() {
+        return (
+            <div>
+                <Link to='/'>
+
+                </Link>
+
+
+
+                    <Outlet/>
+
+            </div>
+        )
+    }
+}
+
+
+export default Films;
+
+
+
+
 /*
 import React, { Component } from "react";
 
@@ -34,6 +65,22 @@ export default Films;
 */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 import React, {Component} from 'react';
 import FilmService from "../../services/fetchFilmService/filmService";
 import Film from "./film";
@@ -63,8 +110,6 @@ class Films extends Component {
 
     
 
-
-
     
 
     render() {
@@ -73,7 +118,7 @@ class Films extends Component {
 
         return (
             <div className='back'>
-                {/* {films.title}. {films.image} */}
+                
                 {
                     films.map(value => <Film item={value} key={value.id}/>)
                 }
@@ -86,3 +131,6 @@ class Films extends Component {
 }
 
 export default Films;
+
+
+*/

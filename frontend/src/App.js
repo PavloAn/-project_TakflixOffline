@@ -107,13 +107,16 @@ class App extends Component {
                             element = { <AboutUs/> } 
                           />  
   
-                          <Route
+
+                          {/* <Route
                             path='/films/'
                             element = { <Films/> }
                             // element = { <FullFilm/> }
-                          />  
+                          />   */}
   
-                          <Route path='/login/' element = { <Login/> }>  
+
+
+                          {/* <Route path='/login/' element = { <Login/> }>  
 
                               <Route 
                                 index 
@@ -130,7 +133,40 @@ class App extends Component {
                                 element = { <FullAfishaFilm/> } 
                               />  
 
-                          </Route>
+                          </Route> */}
+
+
+                        <Route path='/films/' element = { <Films/> }>  
+
+                          <Route 
+                            index 
+                            element={ <Afisha/> } 
+                          />
+
+                          <Route 
+                            path='*' 
+                            element={ <Afisha/> } 
+                          />                        
+
+                          <Route
+                            path=':id'
+                            element = { <FullAfishaFilm/> } 
+                          />  
+
+                        </Route>
+
+
+
+                          <Route
+                            path='/login/'
+                            element = { <Login/> }
+                          />  
+
+
+
+
+
+
 
 
                           {/* <Route
