@@ -42,6 +42,20 @@ class App extends Component {
                               </li>   */}
 
                               <li>
+                                <div className='logo'>
+                                  <Logo width="12rem" />
+                                </div>
+                              </li>
+
+                              <li>
+                                <div className='spece'>
+
+                                </div>
+                              </li>
+
+
+
+                              <li>
                                   <Link to='/'>
                                       Головна
                                   </Link>
@@ -64,6 +78,8 @@ class App extends Component {
                                       Увійти
                                   </Link>
                               </li>
+
+
 
 
   
