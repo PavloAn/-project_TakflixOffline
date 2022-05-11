@@ -3,7 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import FilmService from "../../services/fetchFilmService/filmService";
 import AfishaFilm from "./afishaFilm";
 import { useHistory } from 'react-router-dom';
-
+import "./afisha.css";
 
 class Afisha extends Component {
 
@@ -26,12 +26,22 @@ class Afisha extends Component {
 
 
         return (
-            <div>
+            
+               
+            <div className="afishacss">
+
+                    <div className="container">
+                        <div className="intro__inner"> 
+                            <h1 className="intro__title">Афіша</h1>
+                        </div>
+                    </div> 
+
                 {
                     films.map(film => <AfishaFilm key={film._id} item={film}/>)
 
                 }
             </div>
+            
         )
     }
 }

@@ -49,7 +49,7 @@ class App extends Component {
   
                               <li>
                                   <Link to='/contacts'>
-                                      Контакти
+                                      Про нас
                                   </Link>
                               </li>
   

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom";
-import "./afisha.css";
+import './afisha.css';
 
 class AfishaFilm extends Component {
 
@@ -17,10 +17,12 @@ class AfishaFilm extends Component {
         //console.console.log(this.params);
 
         return (
-            <div className="mainDiv">
-                <div>{item._id}</div>
-                <div><img src={item.image}></img></div>
-                <div><h6><Link to={`${item._id}`}>{item.title}</Link></h6></div>
+            <div>
+                {/* <div>{item._id}</div> */}
+                <div className='mainDiv'>
+                    <img src={item.image}></img> <h4><Link className="linktext" to={`${item._id}`}>{item.title}</Link></h4>
+                    </div>
+                {/* <div className='mainDiv'><h6><Link to={`${item._id}`}>{item.title}</Link></h6></div> */}
                 <hr/>
 
                 {/* {item.id}. {item.title} -  */}

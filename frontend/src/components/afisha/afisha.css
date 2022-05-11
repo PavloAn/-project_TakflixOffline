@@ -1,3 +1,45 @@
 .mainDiv{
-    margin-left: 20;
+    margin-left: 28%;
+}
+
+
+.afishacss{
+    /* padding-top: 20px; */
+}
+
+
+
+.container {
+    width: 100%;
+    max-width: 1245px;
+    margin: 0 auto;
+}
+
+.intro__inner {
+    
+    max-width: 1245px;
+    padding-left: 210px;
+    
+    
+}
+
+
+.intro__title {
+    font-size: 48px;
+    
+    text-align: left;
+    line-height: 2;
+    /* padding-top: 120px; */
+    
+    overflow: hidden;
+
+}
+
+
+.linktext {
+    color: snow;
+    display: block;
+    text-decoration: none;
+    outline: none;
+    transition: .4s ease-in-out;
 }
