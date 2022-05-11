@@ -6,7 +6,7 @@ export default class FilmService {
         mode: 'no-cors',
     });
 	
-    async films3() {
+    async films4() {
         return await fetch(this.request, {
             method: 'GET',
             

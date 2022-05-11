@@ -13,7 +13,7 @@ class Afisha extends Component {
 
 
     async componentDidMount() {
-        let films = await this.filmService.films1();
+        let films = await this.filmService.films2();
         this.setState({films: films});
     }
 
@@ -28,7 +28,8 @@ class Afisha extends Component {
         return (
             <div>
                 {
-                    films.map(film => <AfishaFilm key={film.id} item={film}/>)
+                    films.map(film => <AfishaFilm key={film._id} item={film}/>)
+
                 }
             </div>
         )

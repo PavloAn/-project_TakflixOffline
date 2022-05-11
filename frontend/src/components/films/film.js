@@ -6,10 +6,16 @@ class Film extends Component {
 
         let {item} = this.props;
 
+        
+
         return (
             <div className='oneFilmBlock'>
                 <div className='oneFilmText'>
-                {item.title}. {item.image}
+
+
+                <div><img src={item.image}></img></div>
+                <div><h6>{item.title}</h6></div>
+                {/* {item.title}. {item.producer} */}
                     {/* {item.id}. {item.title} - {item.completed} */}
                 </div>
                 

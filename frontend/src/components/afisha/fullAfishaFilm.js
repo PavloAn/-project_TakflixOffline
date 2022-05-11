@@ -28,6 +28,7 @@ const FullAfishaFilm = () => {
     const {id} = useParams();
     //const idishka = parseInt(id);
 
+
     const [film, setFilm] = useState(null);
     //state = {film: null}; 
 
@@ -45,8 +46,9 @@ const FullAfishaFilm = () => {
 
     useEffect(() => {
         //fetchMovies();
-
-        fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
+        
+        // fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
+        fetch(`http://localhost:8800/api/movies/find/${id}`)
             .then(res => res.json())
             .then(data => setFilm(data))
 
@@ -60,7 +62,9 @@ const FullAfishaFilm = () => {
                 <div>
                     <h2>{id}</h2>
                     {
-                        film && <div> {film.id}. {film.title} - {film.completed.toString()}  </div>
+                        // film && <div> {film.id}. {film.title} - {film.completed.toString()}  </div>
+
+                        film && <div> {film.title}</div>
                     }
                 </div>
 

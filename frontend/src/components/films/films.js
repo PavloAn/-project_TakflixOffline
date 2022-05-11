@@ -48,11 +48,24 @@ class Films extends Component {
 
 
     async componentDidMount() {
-        let films = await this.filmService.films3();
+        let films = await this.filmService.films2();
         
         this.setState({films: films})
+
+
+        // return await fetch("http://localhost:8800/api/movies", {
+        //     method: 'POST',
+        //     headers: { 'Content-Type': 'application/json'}
+        //   })
+        // .then(res => res.json())
+        // .then(data => this.setState({films: data}));
     }
 
+    
+
+
+
+    
 
     render() {
 
@@ -60,13 +73,16 @@ class Films extends Component {
 
         return (
             <div className='back'>
-                {films.title}. {films.image}
+                {/* {films.title}. {films.image} */}
                 {
                     films.map(value => <Film item={value} key={value.id}/>)
                 }
             </div>
         );
     }
+
+
+
 }
 
 export default Films;
