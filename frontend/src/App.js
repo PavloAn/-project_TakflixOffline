@@ -13,6 +13,7 @@ import { FullAfishaFilm } from './components/afisha/fullAfishaFilm';
 import Afisha from './components/afisha/afisha';
 import AboutUs from './components/aboutUs/aboutUs';
 
+
 class App extends Component {
 //function App() {
 
@@ -212,7 +213,9 @@ class App extends Component {
   
                   </div>
                   <div className="item3">
-                      <div>Footer</div>
+                      <div>
+                        Footer
+                      </div>
                   </div>
   
               </div>

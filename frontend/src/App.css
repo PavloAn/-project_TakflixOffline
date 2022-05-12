@@ -61,7 +61,7 @@
 .containerGrid{
   font-size: 30px;
   display: grid;
-  grid-template-rows: 70px 1fr 120px;
+  grid-template-rows: 70px 1fr 150px;
   /*grid-template-rows: 120px 1000px 120px;*/
   grid-template-columns: 1fr;
   grid-template-areas:
@@ -255,7 +255,7 @@ nav a {
 
 .logo {
   margin-left: 120px;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 
@@ -266,7 +266,8 @@ nav a {
 
 
 
+
 /* footer */
 
 
-
+/* footer */

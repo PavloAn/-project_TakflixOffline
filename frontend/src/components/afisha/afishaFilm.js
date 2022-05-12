@@ -20,8 +20,11 @@ class AfishaFilm extends Component {
             <div>
                 {/* <div>{item._id}</div> */}
                 <div className='mainDiv'>
-                    <img src={item.image}></img> <h4><Link className="linktext" to={`${item._id}`}>{item.title}</Link></h4>
-                    </div>
+                    <img src={item.image} align="top"></img >  <h4><Link className="linktext" to={`${item._id}`}>{item.title}</Link></h4>
+
+                    {/* <p><img src={item.image} align="top"></img >{item.title}</p>  <h4><Link className="linktext" to={`${item._id}`}>{item.title}</Link></h4> */}
+                    {/* <hr/> */}
+                </div>
                 {/* <div className='mainDiv'><h6><Link to={`${item._id}`}>{item.title}</Link></h6></div> */}
                 <hr/>
 

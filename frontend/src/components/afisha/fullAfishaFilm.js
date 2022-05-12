@@ -60,11 +60,60 @@ const FullAfishaFilm = () => {
     return (
 
                 <div>
-                    <h2>{id}</h2>
+                    {/* <h2>{id}</h2> */}
                     {
                         // film && <div> {film.id}. {film.title} - {film.completed.toString()}  </div>
 
-                        film && <div> {film.title}</div>
+                        film && <div className='containerGrid2'>
+
+                            <hr/>
+
+                            <div className='items1'>
+                                <div className="hren">
+                                    <div className=""> 
+                                        <h1 className='titleOf'><span>{film.title}</span></h1>
+                                    </div>
+                                </div> 
+                            </div>
+
+                            <div className='items2'>
+                                <img src={`${film.image}`}></img>
+                            </div>
+
+                            <div className='items3'>
+                                <div><b>Режисер: </b>{film.director}</div>
+                                <div><b>Рік: </b>{film.createdAt}</div>
+                                <div><b>Жанр: </b>{film.genres}</div>
+                                <div><b>Тривалість: </b>{film.duration}</div>
+                            </div>
+
+                            <div className='items4'>
+                            <div className="hren">
+                                    <div className=""> 
+                                        <h1 className='titleOf'><span>Синопис</span></h1>
+                                    </div>
+                                </div> 
+                            </div>
+
+                            <div className='items5'>
+                                <div>{film.description}</div>
+                            </div>
+
+                            <div className='items6'>
+                            <div className="hren">
+                                    <div className=""> 
+                                        <h1 className='titleOf'><span>Трейлер</span></h1>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className='items7'>
+                                {/* <iframe width="560" height="315" src={`${film.trailer}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+                                {/* <iframe width="560" height="315" src="https://www.youtube.com/watch?v=TW0Rm9fKPX8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+                                <iframe width="896" height="504" src="https://www.youtube.com/embed/TW0Rm9fKPX8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+  
+                        </div>
                     }
                 </div>
 

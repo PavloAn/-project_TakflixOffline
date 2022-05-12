@@ -23,17 +23,37 @@
     
 }
 
-
 .intro__title {
     font-size: 48px;
-    
     text-align: left;
     line-height: 2;
     /* padding-top: 120px; */
-    
     overflow: hidden;
-
 }
+
+
+.titleOf{
+  font-size: 48px;
+  line-height: 2;
+  overflow: hidden;
+  
+}
+
+.hren{
+
+  padding-left: 305px;
+  text-align: left;
+}
+
+span:after
+{
+    content:"\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
+    text-decoration:line-through;
+}
+
+
+
+
 
 
 .linktext {
@@ -43,3 +63,66 @@
     outline: none;
     transition: .4s ease-in-out;
 }
+
+
+
+
+
+.containerGrid2{
+    /* font-size: 30px; */
+    display: grid;
+    grid-template-rows: 200 600 200 1fr 200 320;
+    /*grid-template-rows: 120px 1000px 120px;*/
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "headerOne headerOne"
+      "image description"
+      "headerTwo headerTwo"
+      "texts texts"
+      "headerThree headerThree"
+      "video video";
+
+  
+    height: 100%;
+    width: 100%;
+    justify-items: center;
+    /* align-items: start; */
+  }
+  
+
+  .items1{
+    grid-area: headerOne;
+    align-self: center;
+    justify-self: start;
+  }
+  .items2{
+    grid-area: image;
+    align-self: flex-end;
+    /* justify-self: end; */
+  }
+  .items3{
+    grid-area: description;
+    align-self: center;
+    justify-self: start;
+    font-size: 24px;
+  }
+  .items4{
+    grid-area: headerTwo;
+    align-self: center;
+    justify-self: start;
+  }
+  .items5{
+    grid-area: texts;
+    align-self: center;
+    font-size: 24px;
+    width: 67%;
+  }
+  .items6{
+    grid-area: headerThree;
+    align-self: center;
+    justify-self: start;
+  }
+  .items7{
+    grid-area: video;
+    align-self: center;
+  }
