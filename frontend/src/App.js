@@ -12,7 +12,7 @@ import { ReactComponent as Logo } from './images/TAKFLIX_logo.svg';
 import { FullAfishaFilm } from './components/afisha/fullAfishaFilm';
 import Afisha from './components/afisha/afisha';
 import AboutUs from './components/aboutUs/aboutUs';
-
+import MainFilms from './components/main/mainFilms';
 
 class App extends Component {
 //function App() {
@@ -116,7 +116,29 @@ class App extends Component {
                   <div className="item2">
   
                       <Routes>
-                          <Route path='/' element={ <Main/> } />
+                          
+                        <Route path='/' element = { <Main/> }>  
+
+                          <Route 
+                            index 
+                            element={ <MainFilms/> } 
+                          />
+
+                          <Route 
+                            path='*' 
+                            element={ <MainFilms/> } 
+                          />                        
+
+                          <Route
+                            path=':id'
+                            element = { <FullAfishaFilm/> } 
+                          />  
+
+                        </Route>
+
+
+
+                          {/* <Route path='/' element={ <Main/> } /> */}
                             
                           
                           <Route

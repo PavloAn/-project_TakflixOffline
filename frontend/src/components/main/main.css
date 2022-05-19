@@ -1,3 +1,62 @@
-.disabli{
-    
-}
+.containerGrid3{
+    /* font-size: 30px; */
+    display: grid;
+    grid-template-rows: 1fr 70;
+    /*grid-template-rows: 120px 1000px 120px;*/
+    grid-template-columns: 150 740 150;
+    grid-template-areas:
+      "left center right"
+      "text text text";
+
+  
+    height: 100%;
+    width: 100%;
+    justify-items: center;
+    /* align-items: start; */
+  }
+  
+
+  .items111{
+    grid-area: left;
+    align-self: center;
+    justify-self: right;
+    font-size: 24px;
+  }
+  .items222{
+    grid-area: center;
+    align-self: center;
+    justify-self: center;
+  }
+  .items333{
+    grid-area: right;
+    align-self: center;
+    justify-self: left;
+    font-size: 24px;
+  }
+  .items444{
+    grid-area: text;
+    align-self: center;
+    justify-self: center;
+    font-size: 24px;
+  }
+
+
+
+  .button1 {
+    background-color: white;
+    color: black;
+    color: #8E36EC; 
+    border: 2px solid #8E36EC; 
+    border-radius: 8px;
+
+    transition-duration: 0.4s;
+
+    width: 120px;
+  }
+
+
+
+  .button1:hover {
+    background-color: #8E36EC; /* Green */
+    color: white;
+  }

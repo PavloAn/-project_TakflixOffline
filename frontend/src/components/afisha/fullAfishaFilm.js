@@ -116,9 +116,6 @@ const FullAfishaFilm = () => {
                         </div>
                     }
                 </div>
-
-
-    
             );
 }
 
