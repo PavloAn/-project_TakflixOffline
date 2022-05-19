@@ -108,7 +108,7 @@ const FullAfishaFilm = () => {
                             </div>
 
                             <div className='items7'>
-                                <iframe width="560" height="315" src={`${film.trailer}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="896" height="504" src={`${film.trailer}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 {/* <iframe width="560" height="315" src="https://www.youtube.com/watch?v=TW0Rm9fKPX8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
                                 {/* <iframe width="896" height="504" src="https://www.youtube.com/embed/TW0Rm9fKPX8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
                             </div>

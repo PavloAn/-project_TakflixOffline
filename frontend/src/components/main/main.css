@@ -60,3 +60,10 @@
     background-color: #8E36EC; /* Green */
     color: white;
   }
+
+
+
+  img{
+    max-width: 900;
+    max-height: 540px;
+  }

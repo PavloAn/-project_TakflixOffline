@@ -59,7 +59,7 @@ const MainFilms = () => {
         <h2>
                     {
                         film && <div > 
-                                    <img src={film.image}></img> 
+                                    <img src={film.image2}></img> 
                                     
                                 </div>         
                     }
