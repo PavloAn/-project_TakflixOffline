@@ -26,21 +26,6 @@ class App extends Component {
                       <nav>
                           <ul className="topmenu">
 
-{/* 
-                              <li>
-                                  <div>
-                                    <div className='takflixText'>Takflix</div>
-                                    <div className='offlineText'>offline</div>
-                                    
-                                  </div>
-                              </li> */}
-
-
-                            {/* <li>
-                                  <Link to='/full-film'>
-                                      Фільм
-                                  </Link>
-                              </li>   */}
 
                               <li>
                                 <div className='logo'>
