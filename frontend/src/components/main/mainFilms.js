@@ -46,24 +46,30 @@ const MainFilms = () => {
 
   return (
 
-<div >
+<div>
     <div className="containerGrid3">
-
 
     <div className="items111">
         <button className="button1" onClick={() => id <= 1 ? setId(4) : setId(id => id-1) }><h2>  prev  </h2></button>
     </div>  
 
-
     <div className="items222">
+      <div>
         <h2>
                     {
-                        film && <div > 
+                        film && 
+                                <div> 
                                     <img src={film.image2}></img> 
                                     
-                                </div>         
+                                </div>   
+                                // <div style={{ 
+                                //   backgroundImage: `url("${film.image2}")` 
+                                // }}>
+                                //   Hello World
+                                // </div>      
                     }
         </h2>
+      </div>
     </div>
 
 
@@ -79,8 +85,7 @@ const MainFilms = () => {
         }
     </div>
 
-
-    </div >        
+    </div >   
 </div>
 )}
 

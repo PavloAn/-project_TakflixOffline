@@ -3,7 +3,9 @@
     display: grid;
     grid-template-rows: 1fr 70;
     /*grid-template-rows: 120px 1000px 120px;*/
+    /* grid-template-columns: 150 740 150; */
     grid-template-columns: 150 740 150;
+
     grid-template-areas:
       "left center right"
       "text text text";
@@ -19,8 +21,9 @@
   .items111{
     grid-area: left;
     align-self: center;
-    justify-self: right;
+    justify-self: left;
     font-size: 24px;
+    margin-left: 80px;
   }
   .items222{
     grid-area: center;
@@ -30,8 +33,9 @@
   .items333{
     grid-area: right;
     align-self: center;
-    justify-self: left;
+    justify-self: right;
     font-size: 24px;
+    margin-right: 80px;
   }
   .items444{
     grid-area: text;
@@ -64,6 +68,10 @@
 
 
   img{
-    max-width: 900;
-    max-height: 540px;
+    /* max-width: 900;
+    max-height: 540px; */
+    /* max-width: 1020px; */
+    max-height: 612px;
+    /* max-height: 648px; */
+
   }
