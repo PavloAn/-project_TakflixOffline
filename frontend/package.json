@@ -1,41 +1,66 @@
 {
-  "name": "frontend",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.1.1",
-    "@testing-library/user-event": "^13.5.0",
-    "axios": "^0.26.1",
-    "cors": "^2.8.5",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
+  "name": "takflix_offline_frontend",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
+    "clean": "rm -rf node_modules/ && npm cache clean",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@date-io/moment": "^2.14.0",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@fullcalendar/core": "^5.11.0",
+    "@fullcalendar/daygrid": "^5.11.0",
+    "@fullcalendar/interaction": "^5.11.0",
+    "@fullcalendar/react": "^5.11.1",
+    "@fullcalendar/timegrid": "^5.11.0",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@material-ui/lab": "^4.0.0-alpha.61",
+    "@material-ui/pickers": "^3.3.10",
+    "@material-ui/styles": "^4.11.5",
+    "@material-ui/system": "^4.12.2",
+    "@material-ui/utils": "^4.11.3",
+    "@mui/icons-material": "^5.8.0",
+    "@mui/material": "^5.8.1",
+    "@redux-devtools/extension": "^3.2.2",
+    "chart.js": "^3.7.1",
+    "classnames": "^2.3.1",
+    "fontsource-montserrat": "^4.0.0",
+    "jspdf": "^2.5.1",
+    "moment": "^2.29.3",
+    "react": "^17.0.1",
+    "react-chartjs-2": "^4.1.0",
+    "react-dom": "^17.0.1",
+    "react-google-login": "^5.2.2",
+    "react-redux": "^8.0.1",
+    "react-router-dom": "^5.3.3",
+    "react-scripts": "^5.0.1",
+    "react-slick": "^0.29.0",
+    "react17-facebook-login": "^4.2.1",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.1",
+    "slick-carousel": "^1.8.1",
+    "uuid": "^8.3.2",
+    "web-vitals": "^2.1.4"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "proxy": "http://localhost:8080",
+  "devDependencies": {
+    "sass": "^1.52.0",
+    "source-map-loader": "^3.0.1"
+  },
+  "description": "",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
