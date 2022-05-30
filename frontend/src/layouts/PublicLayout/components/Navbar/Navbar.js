@@ -76,13 +76,13 @@ class Navbar extends Component {
                 {isAuth ? (
                   <ListItem>
                     <Link className={classes.navLink} onClick={logout} to="/">
-                      Logout
+                      Вийти
                     </Link>
                   </ListItem>
                 ) : (
                   <ListItem>
                     <Link className={classes.navLink} to="/login">
-                      Login
+                      Увійти
                     </Link>
                   </ListItem>
                 )}
@@ -122,26 +122,26 @@ class Navbar extends Component {
               onClick={() => this.setState({ showMenu: !this.state.showMenu })}>
               <li className={classes.innerNavListItem}>
                 <Link className={classes.innerNavLink} to="/">
-                  Home
+                  Головна сторінка
                 </Link>
               </li>
               <li className={classes.innerNavListItem}>
                 <Link
                   className={classes.innerNavLink}
                   to="/movie/category/nowShowing">
-                  Now Showing
+                  Афіша
                 </Link>
               </li>
               <li className={classes.innerNavListItem}>
                 <Link
                   className={classes.innerNavLink}
                   to="/movie/category/comingSoon">
-                  Coming Soon
+                  Про нас
                 </Link>
               </li>
               <li className={classes.innerNavListItem}>
                 <Link className={classes.innerNavLink} to="/cinemas">
-                  Cinemas
+                  Зали
                 </Link>
               </li>
             </ul>
