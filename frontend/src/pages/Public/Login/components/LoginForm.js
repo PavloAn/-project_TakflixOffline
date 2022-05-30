@@ -91,7 +91,7 @@ function LoginForm(props) {
   return (
     <form className={classes.form}>
       <Typography className={classes.title} variant="h2">
-        Sign in
+        Увійти
       </Typography>
 
       <div className={classes.socialLogin}>
@@ -115,7 +115,7 @@ function LoginForm(props) {
                 fontSize: 'calc(.27548vw + 12.71074px)',
                 fontWeight: 700
               }}>
-              Login With Google
+              Login with Google
             </Button>
           )}
         />
@@ -154,12 +154,12 @@ function LoginForm(props) {
         onClick={() => props.login(values.username, values.password)}
         size="large"
         variant="contained">
-        Login now
+        Увійти
       </Button>
       <Typography className={classes.register} variant="body1">
-        Don't have an account?
+        Немає облікового запису? 
         <Link className={classes.registerUrl} to="/register">
-          register
+          Реєстрація
         </Link>
       </Typography>
     </form>

@@ -75,10 +75,10 @@ class Register extends Component {
               <div className={classes.contentBody}>
                 <form className={classes.form}>
                   <Typography className={classes.title} variant="h2">
-                    Create new account
+                    Створення нового облікового запису
                   </Typography>
                   <Typography className={classes.subtitle} variant="body1">
-                    Use your email to create new account... it's free.
+                    Використайте свій e-mail, щоб створити обліковий запис ... це безкоштовно.
                   </Typography>
                   <div className={classes.fields}>
                     <TextField
@@ -152,9 +152,9 @@ class Register extends Component {
                       <Typography
                         className={classes.policyText}
                         variant="body1">
-                        I have read the &nbsp;
+                        Я прочитав (-ла) &nbsp;
                         <Link className={classes.policyUrl} to="#">
-                          Terms and Conditions
+                          Правила та умови
                         </Link>
                         .
                       </Typography>
@@ -168,13 +168,13 @@ class Register extends Component {
                     onClick={this.handleRegister}
                     size="large"
                     variant="contained">
-                    Register now
+                    Зареєструватися
                   </Button>
 
                   <Typography className={classes.login} variant="body1">
-                    Have an account?{' '}
+                    У Вас є обліковий запис?{' '}
                     <Link className={classes.loginUrl} to="/login">
-                      Login
+                      Увійти
                     </Link>
                   </Typography>
                 </form>
