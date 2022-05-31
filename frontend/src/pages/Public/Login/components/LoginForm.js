@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/styles';
 import { Button, TextField, Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import FacebookLogin from 'react17-facebook-login';
+import FacebookLogin from 'react-facebook-login';
 import GoogleLogin from 'react-google-login';
 import { login, facebookLogin, googleLogin } from '../../../../store/actions';
 import { history } from '../../../../utils';

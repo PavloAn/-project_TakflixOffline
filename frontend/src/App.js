@@ -13,7 +13,7 @@ import { pageCursors } from './utils';
 import Routes from './Routes';
 
 import './assets/scss/index.scss';
-import 'fontsource-montserrat/latin.css';
+import "@fontsource/montserrat";
 import { CssBaseline } from '@material-ui/core';
 
 class App extends Component {
