@@ -31,6 +31,15 @@ const BookingPage = lazy(() => import('./pages/Public/BookingPage'));
 
 const Checkin = lazy(() => import('./pages/Public/Checkin'));
 
+
+
+const Main = lazy(() => import('./pages/Public/Main/main.js'));
+const MainFilms = lazy(() => import('./pages/Public/Main/mainFilms.js'));
+const Films = lazy(() => import('./pages/Public/Films/films.js'));
+const Afisha = lazy(() => import('./pages/Public/Afisha/afisha.js'));
+const AfishaFilm = lazy(() => import('./pages/Public/Afisha/afishaFilm.js'));
+const FullAfishaFilm = lazy(() => import('./pages/Public/Afisha/fullAfishaFilm.js'));
+
 const Routes = () => {
   return (
     <Suspense fallback={<Loading />}>
@@ -127,6 +136,13 @@ const Routes = () => {
             component={Account}
           />
           <Route path="*" component={() => '404 NOT FOUND'} />
+          
+
+        <Route exact path='/films/' component = { Films } >  
+          <Route exact component={ Afisha } />
+          <Route path='*' component={ Afisha }  />                        
+          <Route path=':id' component = { FullAfishaFilm }  />  
+        </Route>
         </Switch>
       </Router>
     </Suspense>

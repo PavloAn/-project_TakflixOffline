@@ -53,7 +53,7 @@ class Topbar extends Component {
           </div>
 
           <NavLink className={classes.title} to="/">
-            Cinema App
+            Takflix Offline
           </NavLink>
 
           <IconButton
