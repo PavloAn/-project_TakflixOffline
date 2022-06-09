@@ -55,7 +55,7 @@ const TotalUsers = props => {
               color="textSecondary"
               gutterBottom
               variant="body2">
-              TOTAL USERS
+              Кількість користувачів
             </Typography>
             <Typography variant="h3">{users}</Typography>
           </Grid>
@@ -71,7 +71,7 @@ const TotalUsers = props => {
             16%
           </Typography>
           <Typography className={classes.caption} variant="caption">
-            Since last month
+            З минулого місяця
           </Typography>
         </div>
       </CardContent>

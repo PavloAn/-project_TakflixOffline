@@ -147,7 +147,7 @@ class AddUser extends Component {
               fullWidth
               select
               className={classes.textField}
-              helperText="Admin or Guest"
+              helperText="Admin or User"
               label="Role"
               margin="dense"
               required
@@ -156,7 +156,7 @@ class AddUser extends Component {
               onChange={event =>
                 this.handleFieldChange('role', event.target.value)
               }>
-              {['admin', 'guest'].map(role => (
+              {['admin', 'user'].map(role => (
                 <MenuItem key={`role-${role}`} value={role}>
                   {role}
                 </MenuItem>

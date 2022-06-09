@@ -51,11 +51,9 @@ class Topbar extends Component {
               {isSidebarOpen ? <CloseIcon /> : <MenuIcon />}
             </IconButton>
           </div>
-
           <NavLink className={classes.title} to="/">
             Takflix Offline
           </NavLink>
-
           <IconButton
             className={classes.notificationsButton}
             onClick={() => console.log('Notification')}>

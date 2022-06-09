@@ -66,17 +66,24 @@ function MovieBanner(props) {
             color="inherit">
             {textTruncate(movie.description, 450)}
           </Typography>
-          <Typography className={classes.director} variant="h4" color="inherit">
-            Режисер: {movie.director}
+          <Typography className={classes.director} variant="h4" color="inherit"> Режисер: {movie.director}
           </Typography>
+          <Typography className={classes.cast} variant="h4" color="inherit"> Продюсер: {movie.cast}
+            </Typography>
           <Typography className={classes.genres} variant="h4" color="inherit">
             {movie.genres}
+          </Typography>
+          <Typography
+            className={classes.language}
+            variant="body1"
+            color="inherit">
+            {movie.language}
           </Typography>
           <Typography
             className={classes.duration}
             variant="body1"
             color="inherit">
-            {movie.duration} min
+            {movie.duration} хв
           </Typography>
         </header>
       </div>

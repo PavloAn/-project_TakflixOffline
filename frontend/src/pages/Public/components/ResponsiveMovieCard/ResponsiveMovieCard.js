@@ -38,7 +38,7 @@ const MovieCard = props => {
               className={classes.duration}
               variant="body1"
               color="inherit"> 
-              {movie.duration} min
+              {movie.duration} хв
             </Typography>
           </header>
 

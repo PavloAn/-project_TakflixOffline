@@ -35,12 +35,12 @@ const BestMovies = props => {
     labels: bestMovies.map(movie => movie.movie.title.toUpperCase()),
     datasets: [
       {
-        label: 'This year',
+        label: 'Цього року',
         backgroundColor: palette.primary.main,
         data: bestMovies.map(movie => movie.count)
       },
       {
-        label: 'Last year',
+        label: 'Минулого року',
         backgroundColor: palette.neutral,
         data: [11, 20, 12, 29, 30]
       }
@@ -52,10 +52,10 @@ const BestMovies = props => {
       <CardHeader
         action={
           <Button size="small" variant="text">
-            Best 5<ArrowDropDownIcon />
+            Топ 5<ArrowDropDownIcon />
           </Button>
         }
-        title="Best Movies"
+        title="Найкращі фільми"
       />
       <Divider />
       <CardContent>
@@ -66,7 +66,7 @@ const BestMovies = props => {
       <Divider />
       <CardActions className={classes.actions}>
         <Button color="primary" size="small" variant="text">
-          Overview <ArrowRightIcon />
+          Огляд <ArrowRightIcon />
         </Button>
       </CardActions>
     </Card>

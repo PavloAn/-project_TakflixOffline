@@ -45,7 +45,7 @@ const TotalReservations = props => {
               color="inherit"
               gutterBottom
               variant="body2">
-              TOTAL RESERVATIONS
+              Кількість бронювань
             </Typography>
             <Typography color="inherit" variant="h3">
               {reservations}

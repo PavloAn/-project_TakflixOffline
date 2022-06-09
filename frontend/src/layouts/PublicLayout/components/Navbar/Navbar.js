@@ -54,9 +54,9 @@ class Navbar extends Component {
             <Link className={classes.navLink} to="/cinemas">
               Зали
             </Link>
-	          <Link className={classes.navLink} to="/films">
+	          {/* <Link className={classes.navLink} to="/films">;
 	            Фільми
-	          </Link>
+	          </Link> */}
 
           </div>
 
@@ -68,11 +68,11 @@ class Navbar extends Component {
                     <Link
                       className={classes.navLink}
                       to={
-                        user.role !== 'guest'
+                        user.role !== 'user'
                           ? '/admin/dashboard'
                           : '/mydashboard'
                       }>
-                      Dashboard
+                      Профіль
                     </Link>
                   </ListItem>
                 )}

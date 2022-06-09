@@ -50,18 +50,19 @@ class HomePage extends Component {
         <Box height={60} />
         <MovieCarousel
           carouselClass={classes.carousel}
-          title="Suggested for you"
+          title="Рекомендовано для Вас"
           movies={suggested}
         />
         <MovieCarousel
           carouselClass={classes.carousel}
-          title="Now Showing"
+          title="Фільми"
           to="/movie/category/nowShowing"
           movies={nowShowing}
         />
         <MovieCarousel
           carouselClass={classes.carousel}
-          title="Coming Soon"
+          title="Takflix — це перший і єдиний онлайн-кінотеатр українського кіно. Наша місія - зробити українське кіно легально доступним до перегляду у всіх куточках світу, заохочувати глядачів до перегляду якісного українського контенту та підтримувати національне кіномистецтво.
+          Саме тому 50% від продажу квитків на Takflix отримують творці кіно."
           to="/movie/category/comingSoon"
           movies={comingSoon}
         />

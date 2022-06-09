@@ -4,7 +4,7 @@ export default theme => ({
     height: props => (props.height ? props.height : '100%'),
     width: '100%',
     color: theme.palette.common.white,
-    backgroundColor: theme.palette.background.dark
+    backgroundColor: theme.palette.background.dark,
   },
   blurBackground: {
     position: 'absolute',
@@ -41,7 +41,7 @@ export default theme => ({
   },
   movieTitle: {
     maxWidth: '60%',
-    fontSize: '32px',
+    fontSize: '50px',
     lineHeight: 1.2,
     fontWeight: 400,
     textTransform: 'capitalize'
@@ -52,19 +52,34 @@ export default theme => ({
     fontSize: '16px',
     marginTop: theme.spacing(1)
   },
-
+  cast: {
+    color: '#9ac7fa',
+    fontWeight: '500',
+    fontSize: '16px',
+    marginTop: theme.spacing(1)
+  },
+  language: {
+    display: 'inline-block',
+    marginTop: theme.spacing(2),
+    padding: theme.spacing(1),
+    border: '1px solid rgba(255,255,255,0.13)',
+    fontSize: '14px'
+  },
   duration: {
     display: 'inline-block',
     marginTop: theme.spacing(2),
     padding: theme.spacing(1),
-    border: '1px solid rgba(255,255,255,0.13)'
+    border: '1px solid rgba(255,255,255,0.13)',
+    fontSize: '14px'
   },
   genre: {
     display: 'inline-block',
     color: '#cee4fd',
-    marginLeft: theme.spacing(2)
+    marginLeft: theme.spacing(2),
+    fontSize: '14px',
   },
   descriptionText: {
+    fontSize: '16px',
     color: '#cfd6e1',
     padding: theme.spacing(2, 0),
     maxWidth: '60%'
@@ -90,12 +105,13 @@ export default theme => ({
   },
   movieActions: { position: 'absolute', bottom: 0, right: 0 },
   button: {
-    width: 200,
+    width: 300,
     height: 70,
     borderRadius: 0,
-    zIndex: 2
+    zIndex: 2,
+    fontSize: '16px'
   },
-  learnMore: { color: theme.palette.common.white },
+  learnMore: { color: theme.palette.common.white, fontSize: '16px' },
   buttonIcon: { marginLeft: theme.spacing(2) },
   [theme.breakpoints.down('sm')]: {
     infoSection: {
@@ -109,7 +125,7 @@ export default theme => ({
     },
     descriptionText: {
       maxWidth: '100%',
-      fontSize: '12px'
+      fontSize: '16px'
     },
     tag: { padding: theme.spacing(0.3, 1), margin: theme.spacing(1, 1, 1, 0) },
     movieActions: { display: 'flex', width: '100%' },

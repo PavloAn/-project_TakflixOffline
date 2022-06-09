@@ -36,7 +36,7 @@ export default function BookingInvitation(props) {
     <div className={classes.root}>
       <Paper className={classes.paper}>
         <Typography variant="h4" align="center">
-          Guest Invitation
+          User Invitation
         </Typography>
         <Typography
           className={classes.successInfo}

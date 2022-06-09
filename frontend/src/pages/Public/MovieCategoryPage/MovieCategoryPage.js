@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { makeStyles, Grid, Typography } from '@material-ui/core';
 import ResponsiveMovieCard from '../components/ResponsiveMovieCard/ResponsiveMovieCard';
 import { getMovies } from '../../../store/actions';
+import "./movie.css";
 
 const useStyles = makeStyles(theme => ({
   title: {
@@ -30,10 +31,16 @@ function MovieCategoryPage(props) {
   const classes = useStyles(props);
   return (
     <Grid container spacing={2}>
-      {!['nowShowing', 'comingSoon'].includes(category) ? (
+      {!['nowShowing', ''].includes(category) ? (
         <Grid item xs={12}>
           <Typography className={classes.title} variant="h2" color="inherit">
-            Category Does not exist.
+          <div className="text">
+        <h2>
+            <p>Takflix — це перший і єдиний онлайн-кінотеатр українського кіно. Наша місія - зробити українське кіно легально доступним до перегляду у всіх куточках світу, заохочувати глядачів до перегляду якісного українського контенту та підтримувати національне кіномистецтво.
+            Саме тому 50% від продажу квитків на Takflix отримують творці кіно.</p>
+            <p>Онлайн-кінотеатр Takflix запустився в грудні 2019 року. За два роки роботи наша платформа має найбільшу колекцію українського кіно. У нас можна вибрати до перегляду фільм на будь-який смак, від кінокласики та фільмів-призерів міжнародних кінофестивалів до дебютів молодих режисерів та мистецької документалістики.</p>    
+        </h2>
+    </div>
           </Typography>
         </Grid>
       ) : (

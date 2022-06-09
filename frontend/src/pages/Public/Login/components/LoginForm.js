@@ -91,7 +91,7 @@ function LoginForm(props) {
   return (
     <form className={classes.form}>
       <Typography className={classes.title} variant="h2">
-        Увійти
+        Вхід
       </Typography>
 
       <div className={classes.socialLogin}>
@@ -157,9 +157,9 @@ function LoginForm(props) {
         Увійти
       </Button>
       <Typography className={classes.register} variant="body1">
-        Немає облікового запису? 
+        Немає профілю?
         <Link className={classes.registerUrl} to="/register">
-          Реєстрація
+          Зареєструйтеся
         </Link>
       </Typography>
     </form>
