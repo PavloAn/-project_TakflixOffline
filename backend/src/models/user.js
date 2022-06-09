@@ -16,7 +16,6 @@ const userSchema = Schema(
       unique: true,
       required: true,
       trim: true,
-      lowercase: true,
     },
     email: {
       type: String,
@@ -43,7 +42,7 @@ const userSchema = Schema(
     role: {
       type: String,
       default: "superadmin",
-      enum: ["guest", "admin", "superadmin"],
+      enum: ["user", "admin", "superadmin"],
     },
 
     facebook: String,

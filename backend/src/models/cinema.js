@@ -16,7 +16,6 @@ const cinemaSchema = new Schema({
     type: String,
     required: true,
     trim: true,
-    lowercase: true,
   }, 
   seats: {
     type: [Schema.Types.Mixed],
