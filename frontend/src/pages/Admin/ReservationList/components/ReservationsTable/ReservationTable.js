@@ -62,14 +62,14 @@ class ReservationsTable extends Component {
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell align="left">User</TableCell>
-                <TableCell align="left">Phone</TableCell>
-                <TableCell align="left">Start At</TableCell>
-                <TableCell align="left">Movie</TableCell>
-                <TableCell align="left">Cinema</TableCell>
-                <TableCell align="left">Ticket Price</TableCell>
-                <TableCell align="left">Total</TableCell>
-                <TableCell align="left">Checkin</TableCell>
+                <TableCell align="left">Користувач</TableCell>
+                <TableCell align="left">Телефон</TableCell>
+                <TableCell align="left">Початок</TableCell>
+                <TableCell align="left">Фільм</TableCell>
+                <TableCell align="left">Зал</TableCell>
+                <TableCell align="left">Ціна квитка</TableCell>
+                <TableCell align="left">Сума</TableCell>
+                <TableCell align="left">Перевірка</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -104,7 +104,7 @@ class ReservationsTable extends Component {
                       {reservation.total}
                     </TableCell>
                     <TableCell className={classes.tableCell}>
-                      {reservation.checkin ? 'yes' : 'no'}
+                      {reservation.checkin ? 'так' : 'ні'}
                     </TableCell>
                   </TableRow>
                 ))}

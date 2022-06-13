@@ -25,7 +25,7 @@ const movieSchema = new Schema({
     required: true,
     trim: true,
   },
-  cast: {
+  producer: {
     type: String,
     required: true,
     trim: true,

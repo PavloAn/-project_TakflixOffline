@@ -50,7 +50,7 @@ const moviesUserModeling = async username => {
   userPreference = {
     genre: {},
     director: {},
-    cast: {},
+    producer: {},
   };
 
   const userReservations = JSON.parse(
@@ -71,7 +71,7 @@ const moviesUserModeling = async username => {
   moviesWatched.map(movie => {
     let genres = movie.genre.replace(/\s*,\s*/g, ',').split(',');
     let directors = movie.director.replace(/\s*,\s*/g, ',').split(',');
-    let casts = movie.cast.replace(/\s*,\s*/g, ',').split(',');
+    let producers = movie.producer.replace(/\s*,\s*/g, ',').split(',');
     for (let genre of genres) {
       userPreference.genre[genre]
         ? ++userPreference.genre[genre]
@@ -82,8 +82,8 @@ const moviesUserModeling = async username => {
         ? ++userPreference.director[director]
         : (userPreference.director[director] = 1);
     }
-    for (let cast of casts) {
-      userPreference.cast[cast] ? ++userPreference.cast[cast] : (userPreference.cast[cast] = 1);
+    for (let producer of producers) {
+      userPreference.producer[producer] ? ++userPreference.producer[producer] : (userPreference.producer[producer] = 1);
     }
   });
 

@@ -48,14 +48,14 @@ export const addShowtime = showtime => async dispatch => {
       body: JSON.stringify(showtime)
     });
     if (response.ok) {
-      dispatch(setAlert('Showtime Created', 'success', 5000));
-      return { status: 'success', message: 'Showtime Created' };
+      dispatch(setAlert('Сеанс створено', 'success', 5000));
+      return { status: 'success', message: 'Сеанс створено' };
     }
   } catch (error) {
     dispatch(setAlert(error.message, 'error', 5000));
     return {
       status: 'error',
-      message: ' Cinema have not been saved, try again.'
+      message: 'Сеанс не збережено, спробуйте ще раз.'
     };
   }
 };
@@ -73,14 +73,14 @@ export const updateShowtime = (showtime, id) => async dispatch => {
       body: JSON.stringify(showtime)
     });
     if (response.ok) {
-      dispatch(setAlert('Showtime Created', 'success', 5000));
-      return { status: 'success', message: 'Showtime Created' };
+      dispatch(setAlert('Сеанс оновлено', 'success', 5000));
+      return { status: 'success', message: 'Сеанс оновлено' };
     }
   } catch (error) {
     dispatch(setAlert(error.message, 'error', 5000));
     return {
       status: 'error',
-      message: ' Cinema have not been saved, try again.'
+      message: 'Сеанс не збережено, спробуйте ще раз.'
     };
   }
 };
@@ -98,15 +98,15 @@ export const deleteShowtime = id => async dispatch => {
     });
     if (response.ok) {
       dispatch({ type: DELETE_SHOWTIME, payload: id });
-      dispatch(setAlert('Showtime Deleted', 'success', 5000));
+      dispatch(setAlert('Сеанс видалено', 'success', 5000));
       dispatch(getShowtimes());
-      return { status: 'success', message: 'Showtime Removed' };
+      return { status: 'success', message: 'Сеанс видалено' };
     }
   } catch (error) {
     dispatch(setAlert(error.message, 'error', 5000));
     return {
       status: 'error',
-      message: ' Showtime have not been deleted, try again.'
+      message: 'Сеанс не видалено, спробуйте ще раз.'
     };
   }
 };

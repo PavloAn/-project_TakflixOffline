@@ -79,25 +79,25 @@ export default function BookingSeats(props) {
             <div
               className={classes.seatInfoLabel}
               style={{ background: 'rgb(96, 93, 169)' }}></div>
-            Seat Available
+            Місце вільне
           </div>
           <div className={classes.seatInfo}>
             <div
               className={classes.seatInfoLabel}
               style={{ background: 'rgb(65, 66, 70)' }}></div>
-            Reserved Seat
+            Зарезервовано місце
           </div>
           <div className={classes.seatInfo}>
             <div
               className={classes.seatInfoLabel}
               style={{ background: 'rgb(120, 205, 4)' }}></div>
-            Selected Seat
+            Вибране місце
           </div>
           <div className={classes.seatInfo}>
             <div
               className={classes.seatInfoLabel}
               style={{ background: 'rgb(14, 151, 218)' }}></div>
-            Recommended Seat
+            Рекомендоване місце
           </div>
         </div>
       </Box>

@@ -32,7 +32,7 @@ export default function BookingForm(props) {
         alignItems="center"
         justifyContent="center">
         <Typography align="center" variant="h2" color="inherit">
-          No Cinema Available.
+          Немає доступного сеансу.
         </Typography>
       </Box>
     );
@@ -44,7 +44,7 @@ export default function BookingForm(props) {
           fullWidth
           select
           value={selectedCinema}
-          label="Select Cinema"
+          label="Виберіть зал"
           variant="outlined"
           onChange={onChangeCinema}>
           {cinemas.map(cinema => (
@@ -62,7 +62,7 @@ export default function BookingForm(props) {
               margin="none"
               fullWidth
               id="start-date"
-              label="Start Date"
+              label="Дата"
               minDate={new Date(showtime.startDate)}
               maxDate={new Date(showtime.endDate)}
               value={selectedDate}
@@ -80,7 +80,7 @@ export default function BookingForm(props) {
             fullWidth
             select
             value={selectedTime}
-            label="Select Time"
+            label="Час"
             variant="outlined"
             onChange={onChangeTime}>
             {times.map((time, index) => (

@@ -88,7 +88,7 @@ router.put("/movies/:id", auth.enhance, async (req, res) => {
     "language",
     "genre",
     "director",
-    "cast",
+    "producer",
     "description",
     "duration",
     "releaseDate",

@@ -53,7 +53,7 @@ export default function MovieInfo(props) {
   const classes = useStyles(props);
   const { movie } = props;
 
-  if (!movie) return <h1>Movie Loading...</h1>;
+  if (!movie) return <h1>Завантаження фільму...</h1>;
 
   return (
     <Grid item xs={12} md={12} lg={3}>
@@ -69,27 +69,27 @@ export default function MovieInfo(props) {
           {movie.director && (
             <div className={classes.infoBox}>
               <Typography variant="subtitle1" color="inherit">
-                Director
+                Продюсер
               </Typography>
               <Typography variant="caption" color="inherit">
                 {movie.director}
               </Typography>
             </div>
           )}
-          {movie.cast && (
+          {movie.producer && (
             <div className={classes.infoBox}>
               <Typography variant="subtitle1" color="inherit">
-                Cast
+                Продюсер
               </Typography>
               <Typography variant="caption" color="inherit">
-                {movie.cast}
+                {movie.producer}
               </Typography>
             </div>
           )}
           {movie.genre && (
             <div className={classes.infoBox}>
               <Typography variant="subtitle1" color="inherit">
-                Genre
+                Жанр
               </Typography>
               <Typography variant="caption" color="inherit">
                 {movie.genre}

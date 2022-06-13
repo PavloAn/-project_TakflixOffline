@@ -81,7 +81,7 @@ function CinemaCard(props) {
       <div className={classes.stats}>
         <AttachMoney className={classes.eventIcon} />
         <Typography className={classes.eventText} variant="body2">
-          Вартість: {cinema.ticketPrice} <span>&#8372;</span> (грн.) за фільм
+          Вартість (грн.): {cinema.ticketPrice} <span>&#8372;</span> за фільм
         </Typography>
       </div>
       <div className={classes.stats}>

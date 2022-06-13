@@ -56,10 +56,10 @@ export const addReservation = reservation => async dispatch => {
     });
     if (response.ok) {
       const { reservation, QRCode } = await response.json();
-      dispatch(setAlert('Reservation Created', 'success', 5000));
+      dispatch(setAlert('Бронювання створено', 'success', 5000));
       return {
         status: 'success',
-        message: 'Reservation Created',
+        message: 'Бронювання створено',
         data: { reservation, QRCode }
       };
     }
@@ -67,7 +67,7 @@ export const addReservation = reservation => async dispatch => {
     dispatch(setAlert(error.message, 'error', 5000));
     return {
       status: 'error',
-      message: ' Reservation have not been created, try again.'
+      message: 'Бронювання не створено, спробуйте ще раз.'
     };
   }
 };
@@ -85,14 +85,14 @@ export const updateReservation = (reservation, id) => async dispatch => {
       body: JSON.stringify(reservation)
     });
     if (response.ok) {
-      dispatch(setAlert('Reservation Updated', 'success', 5000));
-      return { status: 'success', message: 'Reservation Updated' };
+      dispatch(setAlert('Бронювання оновлено', 'success', 5000));
+      return { status: 'success', message: 'Бронювання оновлено' };
     }
   } catch (error) {
     dispatch(setAlert(error.message, 'error', 5000));
     return {
       status: 'error',
-      message: ' Reservation have not been updated, try again.'
+      message: 'Бронювання не оновлено, спробуйте ще раз.'
     };
   }
 };
@@ -109,14 +109,14 @@ export const removeReservation = id => async dispatch => {
       }
     });
     if (response.ok) {
-      dispatch(setAlert('Reservation Deleted', 'success', 5000));
-      return { status: 'success', message: 'Reservation Removed' };
+      dispatch(setAlert('Бронювання видалено', 'success', 5000));
+      return { status: 'success', message: 'Бронювання видалено' };
     }
   } catch (error) {
     dispatch(setAlert(error.message, 'error', 5000));
     return {
       status: 'error',
-      message: ' Reservation have not been deleted, try again.'
+      message: 'Бронювання не видалено, спробуйте ще раз.'
     };
   }
 };

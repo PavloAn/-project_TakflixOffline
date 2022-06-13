@@ -44,15 +44,15 @@ function Checkin(props) {
     <Grid container spacing={2}>
       <Grid item xs={12}>
         <Typography className={classes.title} variant="h2" color="inherit">
-          Check In
+          Перевірка
         </Typography>
         {reservation && reservation.checkin ? (
           <Typography variant="body1" color="primary" align="center">
-            Check in for user: {reservation.username} was successful.
+            Реєстрація користувача: {reservation.username} пройшла успішно.
           </Typography>
         ) : (
           <Typography variant="body1" color="error" align="center">
-            Something went wrong...
+            Щось пішло не так...
           </Typography>
         )}
       </Grid>

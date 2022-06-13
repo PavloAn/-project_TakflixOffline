@@ -21,7 +21,7 @@ export const uploadImage = (id, image) => async dispatch => {
     });
     const responseData = await response.json();
     if (response.ok) {
-      dispatch(setAlert('Image Uploaded', 'success', 5000));
+      dispatch(setAlert('Зображення завантажено', 'success', 5000));
     }
     if (responseData.error) {
       dispatch(setAlert(responseData.error.message, 'error', 5000));
@@ -108,7 +108,7 @@ export const register = ({
       user && setUser(user);
       if (image) dispatch(uploadImage(user._id, image)); // Upload image
       dispatch({ type: REGISTER_SUCCESS, payload: responseData });
-      dispatch(setAlert('Реєстрація Success', 'success', 5000));
+      dispatch(setAlert('Реєстрація', 'success', 5000));
     }
     if (responseData._message) {
       dispatch({ type: REGISTER_FAIL });
@@ -157,7 +157,7 @@ export const logout = () => async dispatch => {
     if (response.ok) {
       removeUser();
       dispatch({ type: LOGOUT });
-      dispatch(setAlert('Вихід Success', 'success', 5000));
+      dispatch(setAlert('Вихід', 'success', 5000));
     }
     if (responseData.error) {
       dispatch(setAlert(responseData.error.message, 'error', 5000));

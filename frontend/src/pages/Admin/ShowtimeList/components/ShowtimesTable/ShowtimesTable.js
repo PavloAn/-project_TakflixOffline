@@ -75,11 +75,11 @@ class ShowtimesTable extends Component {
                   />
                   ID
                 </TableCell>
-                <TableCell align="left">Movie</TableCell>
-                <TableCell align="left">Cinema</TableCell>
-                <TableCell align="left">Start Date</TableCell>
-                <TableCell align="left">End Date</TableCell>
-                <TableCell align="left">Time</TableCell>
+                <TableCell align="left">Фільм</TableCell>
+                <TableCell align="left">Зал</TableCell>
+                <TableCell align="left">Дата початку</TableCell>
+                <TableCell align="left">Дата закінчення</TableCell>
+                <TableCell align="left">Час</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>

@@ -299,14 +299,14 @@ class BookingPage extends Component {
       });
       if (response.ok) {
         this.props.resetCheckout();
-        this.props.setAlert('invitations Send', 'success', 5000);
-        return { status: 'success', message: 'invitations Send' };
+        this.props.setAlert('Запрошення надіслано', 'success', 5000);
+        return { status: 'success', message: 'Запрошення надіслано' };
       }
     } catch (error) {
       this.props.setAlert(error.message, 'error', 5000);
       return {
         status: 'error',
-        message: ' invitations have not send, try again.'
+        message: 'Запрошення не надіслано, спробуйте ще раз.'
       };
     }
   };

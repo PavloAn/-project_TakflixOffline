@@ -72,11 +72,11 @@ class UsersTable extends Component {
                     }
                     onChange={onSelectAll}
                   />
-                  Name
+                  Повне ім'я
                 </TableCell>
-                <TableCell align="left">Username</TableCell>
-                <TableCell align="left">Email</TableCell>
-                <TableCell align="left">Registration date</TableCell>
+                <TableCell align="left">Логін</TableCell>
+                <TableCell align="left">Електронна пошта</TableCell>
+                <TableCell align="left">Дата реєстрації</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>

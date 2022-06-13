@@ -10,12 +10,12 @@ export default function Footer() {
       <Typography className={classes.copyright} variant="body1">
         &copy; 2022 Takflix Offline
       </Typography>
-      {/* <Typography variant="caption">
-        Crafted with love |{' '}
-        <Link href="http://georgesimos.com/" target="_blank" rel="noopener">
-          George Simos
+      <Typography variant="caption">
+        Створено з любов'ю |{' '}
+        <Link href="https://github.com/PavloAn/TakflixOffline" target="_blank" rel="noopener">
+          Наш GitHub
         </Link>
-      </Typography> */}
+      </Typography>
     </div>
   );
 }

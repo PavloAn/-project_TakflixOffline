@@ -28,7 +28,7 @@ class AccountProfile extends Component {
                 {user.email}
               </Typography>
               <Typography className={classes.dateText} variant="body1">
-                Join at: {moment(user.createdAt).format('DD/MM/YYYY')}
+                Дата реєстрації: {moment(user.createdAt).format('DD/MM/YYYY')}
               </Typography>
             </div>
             <Avatar
@@ -51,7 +51,7 @@ class AccountProfile extends Component {
               component="span"
               color="primary"
               variant="text">
-              Upload picture
+              Завантажити картинку
             </Button>
           </label>
           <span>{file && file.name}</span>

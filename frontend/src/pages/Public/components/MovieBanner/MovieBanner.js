@@ -68,7 +68,7 @@ function MovieBanner(props) {
           </Typography>
           <Typography className={classes.director} variant="h4" color="inherit"> Режисер: {movie.director}
           </Typography>
-          <Typography className={classes.cast} variant="h4" color="inherit"> Продюсер: {movie.cast}
+          <Typography className={classes.producer} variant="h4" color="inherit"> Продюсер: {movie.producer}
             </Typography>
           <Typography className={classes.genres} variant="h4" color="inherit">
             {movie.genres}

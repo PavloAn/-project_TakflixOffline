@@ -53,9 +53,9 @@ export const addUser = user => async dispatch => {
     const data = await response.json();
     const newUser = data.user;
     if (response.ok) {
-      dispatch(setAlert('User Created', 'success', 5000));
+      dispatch(setAlert('Користувача створено', 'success', 5000));
       dispatch({ type: ADD_USER, payload: newUser });
-      return { status: 'success', message: 'User Created' };
+      return { status: 'success', message: 'Користувача створено' };
     } else {
       throw new Error(data._message);
     }
@@ -63,7 +63,7 @@ export const addUser = user => async dispatch => {
     dispatch(setAlert(error.message, 'error', 5000));
     return {
       status: 'error',
-      message: ' User have not been saved, try again.'
+      message: 'Користувача не створено, спробуйте ще раз.'
     };
   }
 };
@@ -83,9 +83,9 @@ export const updateUser = (user, id) => async dispatch => {
     const data = await response.json();
     const newUser = data.user;
     if (response.ok) {
-      dispatch(setAlert('User Updated', 'success', 5000));
+      dispatch(setAlert('Користувача оновлено', 'success', 5000));
       dispatch({ type: UPDATE_USER, payload: newUser });
-      return { status: 'success', message: 'User Updated' };
+      return { status: 'success', message: 'Користувача оновлено' };
     } else {
       throw new Error(data._message);
     }
@@ -93,7 +93,7 @@ export const updateUser = (user, id) => async dispatch => {
     dispatch(setAlert(error.message, 'error', 5000));
     return {
       status: 'error',
-      message: ' User have not been saved, try again.'
+      message: 'Користувача не оновлено, спробуйте ще раз.'
     };
   }
 };
@@ -111,9 +111,9 @@ export const deleteUser = id => async dispatch => {
     });
     const data = await response.json();
     if (response.ok) {
-      dispatch(setAlert('User Deleted', 'success', 5000));
+      dispatch(setAlert('Користувача видалено', 'success', 5000));
       dispatch({ type: DELETE_USER, payload: id });
-      return { status: 'success', message: 'User Removed' };
+      return { status: 'success', message: 'Користувача видалено' };
     } else {
       throw new Error(data._message);
     }
@@ -121,7 +121,7 @@ export const deleteUser = id => async dispatch => {
     dispatch(setAlert(error.message, 'error', 5000));
     return {
       status: 'error',
-      message: ' User have not been deleted, try again.'
+      message: 'Користувача не видалено, спробуйте ще раз.'
     };
   }
 };

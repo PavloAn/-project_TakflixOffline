@@ -52,7 +52,7 @@ export default theme => ({
     fontSize: '16px',
     marginTop: theme.spacing(1)
   },
-  cast: {
+  producer: {
     color: '#9ac7fa',
     fontWeight: '500',
     fontSize: '16px',

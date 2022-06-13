@@ -12,7 +12,7 @@ export const uploadCinemaImage = (id, image) => async dispatch => {
     });
     const responseData = await response.json();
     if (response.ok) {
-      dispatch(setAlert('Image Uploaded', 'success', 5000));
+      dispatch(setAlert('Зображення завантажено', 'success', 5000));
     }
     if (responseData.error) {
       dispatch(setAlert(responseData.error.message, 'error', 5000));
@@ -68,16 +68,16 @@ export const createCinemas = (image, newCinema) => async dispatch => {
     });
     const cinema = await response.json();
     if (response.ok) {
-      dispatch(setAlert('Cinema Created', 'success', 5000));
+      dispatch(setAlert('Зал створено', 'success', 5000));
       if (image) dispatch(uploadCinemaImage(cinema._id, image));
       dispatch(getCinemas());
-      return { status: 'success', message: 'Cinema Created' };
+      return { status: 'success', message: 'Зал створено' };
     }
   } catch (error) {
     dispatch(setAlert(error.message, 'error', 5000));
     return {
       status: 'error',
-      message: ' Cinema have not been saved, try again.'
+      message: ' Зал не збережено, спробуйте ще раз.'
     };
   }
 };
@@ -95,15 +95,15 @@ export const updateCinemas = (image, cinema, id) => async dispatch => {
       body: JSON.stringify(cinema)
     });
     if (response.ok) {
-      dispatch(setAlert('Cinema Updated', 'success', 5000));
+      dispatch(setAlert('Зал оновлено', 'Успіх', 5000));
       if (image) dispatch(uploadCinemaImage(id, image));
-      return { status: 'success', message: 'Cinema Updated' };
+      return { status: 'success', message: 'Зал оновлено' };
     }
   } catch (error) {
     dispatch(setAlert(error.message, 'error', 5000));
     return {
       status: 'error',
-      message: ' Cinema have not been updated, try again.'
+      message: 'Зал не оновлено, спробуйте ще раз.'
     };
   }
 };
@@ -120,14 +120,14 @@ export const removeCinemas = id => async dispatch => {
       }
     });
     if (response.ok) {
-      dispatch(setAlert('Cinema Deleted', 'success', 5000));
-      return { status: 'success', message: 'Cinema Removed' };
+      dispatch(setAlert('Зал видалено', 'success', 5000));
+      return { status: 'success', message: 'Зал видалено' };
     }
   } catch (error) {
     dispatch(setAlert(error.message, 'error', 5000));
     return {
       status: 'error',
-      message: ' Cinema have not been deleted, try again.'
+      message: 'Зал не видалено, спробуйте ще раз.'
     };
   }
 };

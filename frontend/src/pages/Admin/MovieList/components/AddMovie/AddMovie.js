@@ -27,7 +27,7 @@ class AddMovie extends Component {
     duration: '',
     description: '',
     director: '',
-    cast: '',
+    producer: '',
     releaseDate: new Date(),
     endDate: new Date()
   };
@@ -39,7 +39,7 @@ class AddMovie extends Component {
         language,
         genre,
         director,
-        cast,
+        producer,
         description,
         duration,
         releaseDate,
@@ -50,7 +50,7 @@ class AddMovie extends Component {
         language,
         genre: genre.split(','),
         director,
-        cast,
+        producer,
         description,
         duration,
         releaseDate,
@@ -102,14 +102,14 @@ class AddMovie extends Component {
       duration,
       description,
       director,
-      cast,
+      producer,
       releaseDate,
       endDate
     } = this.state;
 
     const rootClassName = classNames(classes.root, className);
-    const subtitle = this.props.edit ? 'Edit Movie' : 'Add Movie';
-    const submitButton = this.props.edit ? 'Update Movie' : 'Save Details';
+    const subtitle = this.props.edit ? 'Редагувати фільм' : 'Додати фільм';
+    const submitButton = this.props.edit ? 'Оновити фільм' : 'Зберегти';
     const submitAction = this.props.edit
       ? () => this.onUpdateMovie()
       : () => this.onAddMovie();
@@ -123,8 +123,8 @@ class AddMovie extends Component {
           <div className={classes.field}>
             <TextField
               className={classes.textField}
-              helperText="Please specify the title"
-              label="Title"
+              helperText="Будь ласка, вкажіть назву"
+              label="Назва"
               margin="dense"
               required
               value={title}
@@ -139,7 +139,7 @@ class AddMovie extends Component {
               multiple
               displayEmpty
               className={classes.textField}
-              label="Genre"
+              label="Жанр"
               margin="dense"
               required
               value={genre}
@@ -159,7 +159,7 @@ class AddMovie extends Component {
               fullWidth
               multiline
               className={classes.textField}
-              label="Description"
+              label="Опис"
               margin="dense"
               required
               variant="outlined"
@@ -173,7 +173,7 @@ class AddMovie extends Component {
             <TextField
               select
               className={classes.textField}
-              label="Language"
+              label="Мова"
               margin="dense"
               required
               value={language}
@@ -190,7 +190,7 @@ class AddMovie extends Component {
 
             <TextField
               className={classes.textField}
-              label="Duration"
+              label="Тривалість"
               margin="dense"
               type="number"
               value={duration}
@@ -203,7 +203,7 @@ class AddMovie extends Component {
           <div className={classes.field}>
             <TextField
               className={classes.textField}
-              label="Director"
+              label="Режисер"
               margin="dense"
               required
               value={director}
@@ -214,13 +214,13 @@ class AddMovie extends Component {
             />
             <TextField
               className={classes.textField}
-              label="Cast"
+              label="Продюсер"
               margin="dense"
               required
-              value={cast}
+              value={producer}
               variant="outlined"
               onChange={event =>
-                this.handleFieldChange('cast', event.target.value)
+                this.handleFieldChange('producer', event.target.value)
               }
             />
           </div>
@@ -280,7 +280,7 @@ class AddMovie extends Component {
             className={classes.buttonFooter}
             variant="contained"
             onClick={this.onRemoveMovie}>
-            Delete Movie
+            Видалити фільм
           </Button>
         )}
       </div>

@@ -36,21 +36,20 @@ export default function BookingInvitation(props) {
     <div className={classes.root}>
       <Paper className={classes.paper}>
         <Typography variant="h4" align="center">
-          User Invitation
+          Запрошення користувача
         </Typography>
         <Typography
           className={classes.successInfo}
           variant="body1"
           align="center">
-          You have successfuly booked your seats. Please fill the emails below,
-          to send invitations to your friends!
+          Ви успішно забронювали свої місця. Будь ласка, заповніть електронні листи нижче, щоб надіслати запрошення своїм друзям!
         </Typography>
         <Box width={1} textAlign="center">
           <Button
             color="primary"
             variant="outlined"
             onClick={() => onDownloadPDF()}>
-            Download Pass
+            Завантажити квиток
           </Button>
         </Box>
         <Grid className={classes.gridContainer} container spacing={3}>
@@ -58,11 +57,11 @@ export default function BookingInvitation(props) {
             <Grid item xs={12} md={6} lg={4} key={'seat-' + index}>
               <TextField
                 fullWidth
-                label="email"
+                label="Електронна пошта"
                 name={`${convertToAlphabet(seat[0])}-${seat[1]}`}
-                helperText={`Please select an Email for Row : ${convertToAlphabet(
+                helperText={`Виберіть електронну адресу для рядка : ${convertToAlphabet(
                   seat[0]
-                )} - Seat Number : ${seat[1]}`}
+                )} - Номер сидіння : ${seat[1]}`}
                 margin="dense"
                 required
                 value={
@@ -80,7 +79,7 @@ export default function BookingInvitation(props) {
                 color="primary"
                 variant="outlined"
                 onClick={() => sendInvitations()}>
-                Send Invitations
+                Надіслати запрошення
               </Button>
             </Grid>
             <Grid item>
@@ -89,7 +88,7 @@ export default function BookingInvitation(props) {
                 color="secondary"
                 variant="outlined"
                 onClick={() => ignore()}>
-                Ignore
+                Ігнорувати
               </Button>
             </Grid>
           </Grid>

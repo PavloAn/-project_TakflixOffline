@@ -83,7 +83,7 @@ class Register extends Component {
                   <div className={classes.fields}>
                     <TextField
                       className={classes.textField}
-                      label="Full name"
+                      label="Повне ім'я"
                       name="name"
                       value={values.name}
                       onChange={event =>
@@ -93,7 +93,7 @@ class Register extends Component {
                     />
                     <TextField
                       className={classes.textField}
-                      label="User name"
+                      label="Логін"
                       name="username"
                       value={values.username}
                       onChange={event =>
@@ -103,7 +103,7 @@ class Register extends Component {
                     />
                     <TextField
                       className={classes.textField}
-                      label="Email address"
+                      label="Адреса електронної пошти"
                       name="email"
                       value={values.email}
                       onChange={event =>
@@ -113,7 +113,7 @@ class Register extends Component {
                     />
                     <TextField
                       className={classes.textField}
-                      label="Mobile Phone"
+                      label="Мобільний телефон"
                       name="phone"
                       value={values.phone}
                       variant="outlined"
@@ -123,7 +123,7 @@ class Register extends Component {
                     />
                     <TextField
                       className={classes.textField}
-                      label="Password"
+                      label="Пароль"
                       type="password"
                       value={values.password}
                       variant="outlined"

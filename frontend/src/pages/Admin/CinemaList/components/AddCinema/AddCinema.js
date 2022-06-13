@@ -88,7 +88,7 @@ class AddCinema extends Component {
       <>
         <div className={classes.field}>
           <Button onClick={() => this.onAddSeatRow()}>
-            <Add /> add Seats
+            <Add /> Додати місця
           </Button>
         </div>
         {seats.length > 0 &&
@@ -98,7 +98,7 @@ class AddCinema extends Component {
                 key={`new-seat-${index}`}
                 className={classes.textField}
                 label={
-                  'Add number of seats for row : ' +
+                  'Додайте кількість місць для ряду (0-10) : ' +
                   (index + 10).toString(36).toUpperCase()
                 }
                 margin="dense"
@@ -132,10 +132,10 @@ class AddCinema extends Component {
     } = this.state;
 
     const rootClassName = classNames(classes.root, className);
-    const mainTitle = this.props.editCinema ? 'Edit Cinema' : 'Add Cinema';
+    const mainTitle = this.props.editCinema ? 'Редагувати зал' : 'Додати зал';
     const submitButton = this.props.editCinema
-      ? 'Update Cinema'
-      : 'Save Details';
+      ? 'Оновити зал'
+      : 'Зберегти';
     const submitAction = this.props.editCinema
       ? () => this.onSubmitAction('update')
       : () => this.onSubmitAction('create');
@@ -149,8 +149,8 @@ class AddCinema extends Component {
           <div className={classes.field}>
             <TextField
               className={classes.textField}
-              helperText="Please specify the cinema name"
-              label="Name"
+              helperText="Будь ласка, вкажіть назву залу"
+              label="Ім'я"
               margin="dense"
               required
               value={name}
@@ -163,7 +163,7 @@ class AddCinema extends Component {
             <TextField
               fullWidth
               className={classes.textField}
-              label="City"
+              label="Місто"
               margin="dense"
               required
               variant="outlined"
@@ -187,7 +187,7 @@ class AddCinema extends Component {
           <div className={classes.field}>
             <TextField
               className={classes.textField}
-              label="Ticket Price"
+              label="Ціна квитка"
               margin="dense"
               type="number"
               value={ticketPrice}
@@ -198,7 +198,7 @@ class AddCinema extends Component {
             />
             <TextField
               className={classes.textField}
-              label="Seats Available"
+              label="Доступні місця"
               margin="dense"
               required
               value={seatsAvailable}
@@ -224,7 +224,7 @@ class AddCinema extends Component {
             className={classes.buttonFooter}
             variant="contained"
             onClick={() => this.onSubmitAction('remove')}>
-            Delete Cinema
+            Видалити зал
           </Button>
         )}
 

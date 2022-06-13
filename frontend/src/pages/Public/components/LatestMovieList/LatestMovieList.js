@@ -20,10 +20,10 @@ const LatestMovieList = props => {
         <Grid item md={3} xs={12}>
           <div className={classes.title}>
             <Typography className={classes.h2} variant="h2" color="inherit">
-              Latest Movies
+              Останні фільми
             </Typography>
             <Typography className={classes.h4} variant="h4" color="inherit">
-              Covering March & April 2019
+              Охоплює березень та квітень 2019 року
             </Typography>
           </div>
         </Grid>

@@ -24,7 +24,7 @@ const MovieCard = props => {
           <p>{movie.duration}</p>
           <h2>{movie.title}</h2>
           <p>{movie.language}</p>
-          <p>{movie.cast}</p>
+          <p>{movie.producer}</p>
           <p>{movie.director}</p>
           <p>{textTruncate(movie.description)}</p>
         </div>
