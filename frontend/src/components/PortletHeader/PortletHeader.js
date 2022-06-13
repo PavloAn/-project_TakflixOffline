@@ -12,7 +12,7 @@ const styles = theme => ({
     borderTopRightRadius: '2px',
     display: 'flex',
     height: '64px',
-    justifycontent: 'space-between',
+    justifyContent: 'space-between',
     paddingLeft: theme.spacing(3),
     paddingRight: theme.spacing(3),
     position: 'relative'

@@ -21,7 +21,7 @@ import FileUpload from '../../../../../components/FileUpload/FileUpload';
 class AddMovie extends Component {
   state = {
     title: '',
-    image: null,
+    image: null, 
     genre: [],
     language: '',
     duration: '',
@@ -231,7 +231,7 @@ class AddMovie extends Component {
                 inputVariant="outlined"
                 margin="normal"
                 id="release-date"
-                label="Release Date"
+                label="Дата початку"
                 value={releaseDate}
                 onChange={date =>
                   this.handleFieldChange('releaseDate', date._d)
@@ -246,7 +246,7 @@ class AddMovie extends Component {
                 inputVariant="outlined"
                 margin="normal"
                 id="end-date"
-                label="End Date"
+                label="Дата закінчення"
                 value={endDate}
                 onChange={date => this.handleFieldChange('endDate', date._d)}
                 KeyboardButtonProps={{

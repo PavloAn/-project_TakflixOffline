@@ -69,7 +69,7 @@ export default function MovieInfo(props) {
           {movie.director && (
             <div className={classes.infoBox}>
               <Typography variant="subtitle1" color="inherit">
-                Продюсер
+                Режисер
               </Typography>
               <Typography variant="caption" color="inherit">
                 {movie.director}

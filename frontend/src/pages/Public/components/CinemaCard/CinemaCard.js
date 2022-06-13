@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     overflow: 'hidden',
     display: 'flex',
     alignItems: 'center',
-    justifycontent: 'center'
+    justifyContent: 'center'
   },
   image: {
     width: '100%',

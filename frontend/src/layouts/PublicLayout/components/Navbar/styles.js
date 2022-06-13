@@ -8,7 +8,7 @@ export default theme => ({
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'center',
-    justifycontent: 'space-between',
+    justifyContent: 'space-between',
     transform: 'translate3d(0,0,0)',
     backfaceVisibility: 'hidden',
     zIndex: 999,

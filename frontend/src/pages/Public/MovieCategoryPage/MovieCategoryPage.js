@@ -56,7 +56,7 @@ function MovieCategoryPage(props) {
             xs={12}
             direction="column"
             alignItems="center"
-            justifycontent="center"
+            justifyContent="center"
             spacing={2}>
             {movies.map(movie => (
               <Grid key={movie._id} item className={classes.fullWidth}>

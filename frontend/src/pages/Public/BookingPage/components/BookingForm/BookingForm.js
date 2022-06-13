@@ -30,7 +30,7 @@ export default function BookingForm(props) {
         width={1}
         height={1}
         alignItems="center"
-        justifycontent="center">
+        justifyContent="center">
         <Typography align="center" variant="h2" color="inherit">
           Немає доступного сеансу.
         </Typography>

@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
   stats: {
     marginTop: theme.spacing(2),
     display: 'flex',
-    justifycontent: 'center'
+    justifyContent: 'center'
   },
   device: {
     textAlign: 'center',

@@ -9,6 +9,6 @@ export default theme => ({
     paddingTop: '48px',
     paddingBottom: '24px',
     display: 'flex',
-    justifycontent: 'center'
+    justifyContent: 'center'
   }
 });

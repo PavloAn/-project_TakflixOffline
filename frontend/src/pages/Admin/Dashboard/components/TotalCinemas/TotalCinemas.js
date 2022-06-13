@@ -48,7 +48,7 @@ const TotalCinemas = props => {
   return (
     <Card className={classnames(classes.root, className)}>
       <CardContent>
-        <Grid container justifycontent="space-between">
+        <Grid container justifyContent="space-between">
           <Grid item>
             <Typography
               className={classes.title}

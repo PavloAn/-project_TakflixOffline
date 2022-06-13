@@ -23,7 +23,7 @@ const useStyles = makeStyles(() => ({
     position: 'relative'
   },
   actions: {
-    justifycontent: 'flex-end'
+    justifyContent: 'flex-end'
   }
 }));
 

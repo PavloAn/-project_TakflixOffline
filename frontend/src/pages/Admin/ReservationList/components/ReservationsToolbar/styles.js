@@ -5,7 +5,7 @@ export default theme => ({
     display: 'flex',
     alignItems: 'center',
     marginTop: theme.spacing(1),
-    justifycontent: 'space-between'
+    justifyContent: 'space-between'
   },
   searchInput: {
     marginRight: theme.spacing(1)
