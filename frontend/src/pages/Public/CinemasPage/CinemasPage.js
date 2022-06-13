@@ -34,7 +34,7 @@ function CinemasPage(props) {
           item
           xs={12}
           alignItems="center"
-          justifyContent="flex-start"
+          justifycontent="flex-start"
           spacing={2}>
           {cinemas.map(cinema => (
             <Grid key={cinema._id} item xs={12} md={4} lg={3}>

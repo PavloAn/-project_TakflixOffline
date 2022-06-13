@@ -16,7 +16,7 @@ export default theme => ({
   brandWrapper: {
     background: theme.palette.default.dark,
     display: 'flex',
-    justifyContent: 'center',
+    justifycontent: 'center',
     alignItems: 'center',
     width: '271px',
     height: theme.topBar.height,

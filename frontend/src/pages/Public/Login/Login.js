@@ -22,7 +22,7 @@ const styles = theme => ({
     backgroundColor: theme.palette.common.neutral,
     height: '100%',
     display: 'flex',
-    justifyContent: 'center',
+    justifycontent: 'center',
     alignItems: 'center',
     backgroundImage: 'url(https://source.unsplash.com/featured/?cinema)',
     backgroundSize: 'cover',
@@ -49,7 +49,7 @@ const styles = theme => ({
     display: 'flex',
     alignItems: 'center',
     [theme.breakpoints.down('md')]: {
-      justifyContent: 'center'
+      justifycontent: 'center'
     }
   }
 });

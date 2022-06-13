@@ -9,12 +9,12 @@ export default theme => ({
     paddingTop: '48px',
     paddingBottom: '24px',
     display: 'flex',
-    justifyContent: 'center'
+    justifycontent: 'center'
   },
   pagination: {
     marginTop: '24px',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'flex-end'
+    justifycontent: 'flex-end'
   }
 });

@@ -15,7 +15,7 @@ export default theme => ({
     backgroundColor: theme.palette.common.neutral,
     height: '100%',
     display: 'flex',
-    justifyContent: 'center',
+    justifycontent: 'center',
     alignItems: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
@@ -45,7 +45,7 @@ export default theme => ({
     display: 'flex',
     alignItems: 'center',
     [theme.breakpoints.down('md')]: {
-      justifyContent: 'center'
+      justifycontent: 'center'
     }
   },
   form: {

@@ -4,7 +4,7 @@ import { Box } from '@material-ui/core';
 const useStyles = makeStyles(theme => ({
   row: {
     display: 'flex',
-    justifyContent: 'center',
+    justifycontent: 'center',
     width: '100%'
   },
   seat: {
