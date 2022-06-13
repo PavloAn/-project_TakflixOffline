@@ -78,23 +78,23 @@ class AddShowtime extends Component {
   };
 
   onFilterMinDate = () => {
-    const { nowShowing } = this.props;
+    const { afisha } = this.props;
     const { movieId } = this.state;
-    const selectedMovie = nowShowing.find(movie => movie._id === movieId);
+    const selectedMovie = afisha.find(movie => movie._id === movieId);
     if (selectedMovie) return selectedMovie.startDate;
     return new Date();
   };
 
   onFilterMaxDate = () => {
-    const { nowShowing } = this.props;
+    const { afisha } = this.props;
     const { movieId } = this.state;
-    const selectedMovie = nowShowing.find(movie => movie._id === movieId);
+    const selectedMovie = afisha.find(movie => movie._id === movieId);
     if (selectedMovie) return new Date(selectedMovie.endDate);
     return false;
   };
 
   render() {
-    const { nowShowing, cinemas, classes, className } = this.props;
+    const { afisha, cinemas, classes, className } = this.props;
     const { startAt, startDate, endDate, movieId, cinemaId } = this.state;
 
     const rootClassName = classNames(classes.root, className);
@@ -150,7 +150,7 @@ class AddShowtime extends Component {
               onChange={event =>
                 this.handleFieldChange('movieId', event.target.value)
               }>
-              {nowShowing.map(movie => (
+              {afisha.map(movie => (
                 <MenuItem key={movie._id} value={movie._id}>
                   {movie.title}
                 </MenuItem>
@@ -231,7 +231,7 @@ AddShowtime.propTypes = {
 
 const mapStateToProps = ({ movieState, cinemaState }) => ({
   movies: movieState.movies,
-  nowShowing: movieState.nowShowing,
+  afisha: movieState.afisha,
   cinemas: cinemaState.cinemas
 });
 

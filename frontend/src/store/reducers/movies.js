@@ -4,7 +4,7 @@ const initialState = {
   movies: [],
   randomMovie: null,
   latestMovies: [],
-  nowShowing: [],
+  afisha: [],
   comingSoon: [],
   selectedMovie: null,
   suggested:[]
@@ -15,7 +15,7 @@ const getMovies = (state, payload) => {
     .sort((a, b) => Date.parse(b.releaseDate) - Date.parse(a.releaseDate))
     .slice(0, 5);
 
-  const nowShowing = payload.filter(
+  const afisha = payload.filter(
     movie =>
       new Date(movie.endDate) >= new Date() &&
       new Date(movie.releaseDate) < new Date()
@@ -30,7 +30,7 @@ const getMovies = (state, payload) => {
     movies: payload,
     randomMovie: payload[Math.floor(Math.random() * payload.length)],
     latestMovies,
-    nowShowing,
+    afisha,
     comingSoon
   };
 };

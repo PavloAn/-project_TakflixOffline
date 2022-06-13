@@ -57,34 +57,6 @@ export const login = (username, password) => async dispatch => {
   }
 };
 
-export const facebookLogin = e => async dispatch => {
-  try {
-    const { email, userID, name } = e;
-    const options = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, userID, name })
-    };
-    const url = '/users/login/facebook';
-    const response = await fetch(url, options);
-    const responseData = await response.json();
-
-    if (response.ok) {
-      const { user } = responseData;
-      user && setUser(user);
-      dispatch({ type: LOGIN_SUCCESS, payload: responseData });
-      dispatch(setAlert(`Привіт ${user.name}`, 'success', 5000));
-    }
-    if (responseData.error) {
-      dispatch({ type: LOGIN_FAIL });
-      dispatch(setAlert(responseData.error.message, 'error', 5000));
-    }
-  } catch (error) {
-    dispatch({ type: LOGIN_FAIL });
-    dispatch(setAlert(error.message, 'error', 5000));
-  }
-};
-
 export const googleLogin = ({ profileObj }) => async dispatch => {
   try {
     const { email, googleId, name } = profileObj;

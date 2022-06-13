@@ -41,7 +41,7 @@ class HomePage extends Component {
       classes,
       randomMovie,
       comingSoon,
-      nowShowing,
+      afisha,
       suggested
     } = this.props;
     return (
@@ -56,8 +56,8 @@ class HomePage extends Component {
         <MovieCarousel
           carouselClass={classes.carousel}
           title="Фільми"
-          to="/movie/category/nowShowing"
-          movies={nowShowing}
+          to="/movie/category/afisha"
+          movies={afisha}
         />
         <MovieCarousel
           carouselClass={classes.carousel}
@@ -90,7 +90,7 @@ const mapStateToProps = ({ movieState, showtimeState, authState }) => ({
   randomMovie: movieState.randomMovie,
   latestMovies: movieState.latestMovies,
   comingSoon: movieState.comingSoon,
-  nowShowing: movieState.nowShowing,
+  afisha: movieState.afisha,
   showtimes: showtimeState.showtimes,
   suggested: movieState.suggested,
   user: authState.user

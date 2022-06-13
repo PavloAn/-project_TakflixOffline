@@ -73,7 +73,7 @@ const mapStateToProps = ({ movieState }) => ({
   movies: movieState.movies,
   latestMovies: movieState.latestMovies,
   comingSoon: movieState.comingSoon,
-  nowShowing: movieState.nowShowing,
+  afisha: movieState.afisha,
   selectedMovie: movieState.selectedMovie
 });
 

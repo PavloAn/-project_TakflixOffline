@@ -184,7 +184,7 @@ AddUser.propTypes = {
 
 const mapStateToProps = ({ movieState, cinemaState }) => ({
   movies: movieState.movies,
-  nowShowing: movieState.nowShowing,
+  afisha: movieState.afisha,
   cinemas: cinemaState.cinemas
 });
 

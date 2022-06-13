@@ -31,7 +31,7 @@ function MovieCategoryPage(props) {
   const classes = useStyles(props);
   return (
     <Grid container spacing={2}>
-      {!['nowShowing', ''].includes(category) ? (
+      {!['afisha', ''].includes(category) ? (
         <Grid item xs={12}>
           <Typography className={classes.title} variant="h2" color="inherit">
           <div className="text">

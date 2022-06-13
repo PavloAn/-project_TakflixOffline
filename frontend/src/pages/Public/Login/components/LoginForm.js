@@ -3,9 +3,8 @@ import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/styles';
 import { Button, TextField, Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import FacebookLogin from 'react-facebook-login';
 import GoogleLogin from 'react-google-login';
-import { login, facebookLogin, googleLogin } from '../../../../store/actions';
+import { login, googleLogin } from '../../../../store/actions';
 import { history } from '../../../../utils';
 
 const useStyles = makeStyles(theme => ({ 
@@ -70,7 +69,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function LoginForm(props) {
-  const { facebookLogin, googleLogin, isAuthenticated, user, redirect } = props;
+  const { googleLogin, isAuthenticated, user, redirect } = props;
   const classes = useStyles();
   const [values, setValues] = useState({ username: '', password: '' });
 
@@ -119,12 +118,6 @@ function LoginForm(props) {
             </Button>
           )}
         />
-        <FacebookLogin
-          buttonStyle={{ width: '100%', height: 60 }}
-          appId={process.env.REACT_APP_FACEBOOK_APP_ID} //APP ID NOT CREATED YET
-          fields="name,email,picture"
-          callback={facebookLogin}
-        />
       </div>
 
       <div className={classes.fields}>
@@ -170,6 +163,6 @@ const mapStateToProps = state => ({
   isAuthenticated: state.authState.isAuthenticated,
   user: state.authState.user
 });
-export default connect(mapStateToProps, { login, facebookLogin, googleLogin })(
+export default connect(mapStateToProps, { login, googleLogin })(
   LoginForm
 );
