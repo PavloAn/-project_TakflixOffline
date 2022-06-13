@@ -8,13 +8,13 @@ const createMailOptions = (data) => {
   const { to, host, movie, date, time, cinema, image, seat } = data;
 
   const htmlContent = `
-                <h1><strong>Invitation For Movie</strong></h1>
-                <p>Hi, You have been invited by ${host}</p>
-                <p>Movie name: ${movie}</p>
-                <p>Date: ${date}</p>
-                <p>Time: ${time}</p>
-                <p>Cinema name: ${cinema}</p>
-                <p>Cinema seat: ${seat}</p>
+                <h1><strong>Запрошення для фільму</strong></h1>
+                <p>Привіт, вас запросив ${host}</p>
+                <p>Назва фільму: ${movie}</p>
+                <p>Дата: ${date}</p>
+                <p>Час: ${time}</p>
+                <p>Зал: ${cinema}</p>
+                <p>Місце: ${seat}</p>
                 <img src="${image}" alt="cinema Image"/>
                 <br/>
               `;
@@ -35,7 +35,7 @@ router.post("/invitations", auth.simple, async (req, res) => {
       .sendEMail(mailOptions)
       .then(() => ({
         success: true,
-        msg: `The Invitation to ${mailOptions.to} was sent!`,
+        msg: `Запрошення до ${mailOptions.to} відправлено!`,
       }))
       .catch((exception) => ({ success: false, msg: exception }));
   });

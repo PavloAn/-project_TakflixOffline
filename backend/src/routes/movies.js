@@ -28,7 +28,7 @@ router.get(
     const movieId = req.params.id;
     try {
       if (!file) {
-        const error = new Error("Please upload a file");
+        const error = new Error("Будь ласка, завантажте файл");
         error.httpStatusCode = 400;
         return next(error);
       }
@@ -99,7 +99,7 @@ router.put("/movies/:id", auth.enhance, async (req, res) => {
   );
 
   if (!isValidOperation)
-    return res.status(400).send({ error: "Invalid updates!" });
+    return res.status(400).send({ error: "Недійсні оновлення!" });
 
   try {
     const movie = await Movie.findById(_id);

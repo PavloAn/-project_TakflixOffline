@@ -25,7 +25,7 @@ const userSchema = Schema(
       lowercase: true,
       validate(value) {
         if (!validator.isEmail(value)) {
-          throw new Error("email is invalid");
+          throw new Error("Електронна адреса недійсна");
         }
       },
     },
@@ -35,7 +35,7 @@ const userSchema = Schema(
       minlength: 7,
       validate(value) {
         if (value.toLowerCase().includes("password")) {
-          throw new Error("Password should not contain word: password");
+          throw new Error("Пароль не повинен містити слово: пароль");
         }
       },
     },
@@ -44,8 +44,7 @@ const userSchema = Schema(
       default: "superadmin",
       enum: ["user", "admin", "superadmin"],
     },
-
-    facebook: String,
+    
     google: String,
 
     phone: {
@@ -54,7 +53,7 @@ const userSchema = Schema(
       trim: true,
       validate(value) {
         if (!validator.isMobilePhone(value)) {
-          throw new Error("Phone is invalid");
+          throw new Error("Телефон недійсний");
         }
       },
     },
@@ -98,10 +97,10 @@ userSchema.methods.generateAuthToken = async function () {
 
 userSchema.statics.findByCredentials = async (username, password) => {
   const user = await User.findOne({ username });
-  if (!user) throw new Error("Unable to login");
+  if (!user) throw new Error("Не вдається ввійти");
 
   const isMatch = await bcrypt.compare(password, user.password);
-  if (!isMatch) throw new Error("Unable to login");
+  if (!isMatch) throw new Error("Не вдається ввійти");
 
   return user;
 };

@@ -19,7 +19,7 @@ transporter.sendEMail = function (mailRequest) {
       if (error) {
         reject(error);
       } else {
-        resolve("The message was sent!");
+        resolve("Повідомлення надіслано!");
       }
     });
   });

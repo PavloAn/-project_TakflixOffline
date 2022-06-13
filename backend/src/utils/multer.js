@@ -20,7 +20,7 @@ const upload = (path) =>
         cb(null, true);
       } else {
         cb(null, false);
-        return cb(new Error("Only .png, .jpg and .jpeg format allowed!"));
+        return cb(new Error("Дозволено лише формати .png, .jpg та .jpeg!"));
       }
     },
   });

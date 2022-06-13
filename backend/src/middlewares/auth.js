@@ -14,7 +14,7 @@ const simple = async (req, res, next) => {
     req.user = user;
     next();
   } catch (e) {
-    res.status(401).send({ error: "Please authenticate." });
+    res.status(401).send({ error: "Будь ласка, підтвердьте автентичність." });
   }
 };
 
@@ -31,7 +31,7 @@ const enhance = async (req, res, next) => {
     req.user = user;
     next();
   } catch (e) {
-    res.status(401).send({ error: "Please authenticate." });
+    res.status(401).send({ error: "Будь ласка, підтвердьте автентичність." });
   }
 };
 

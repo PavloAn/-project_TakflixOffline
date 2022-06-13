@@ -43,7 +43,7 @@ router.patch('/showtimes/:id', auth.enhance, async (req, res) => {
   const allowedUpdates = ['startAt', 'startDate', 'endDate', 'movieId', 'cinemaId'];
   const isValidOperation = updates.every((update) => allowedUpdates.includes(update));
 
-  if (!isValidOperation) return res.status(400).send({ error: 'Invalid updates!' });
+  if (!isValidOperation) return res.status(400).send({ error: 'Недійсні оновлення!' });
 
   try {
     const showtime = await Showtime.findById(_id);
