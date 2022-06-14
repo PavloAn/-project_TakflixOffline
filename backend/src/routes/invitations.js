@@ -19,7 +19,7 @@ const createMailOptions = (data) => {
                 <br/>
               `;
   return {
-    from: "@gmail.com",
+    from: "takflix.offline@gmail.com",
     to,
     subject: "Takflix Offline Invitation",
     html: htmlContent,

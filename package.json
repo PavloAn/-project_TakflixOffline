@@ -2,12 +2,12 @@
   "name": "takflix-offline",
   "version": "1.0.0",
   "description": "",
-  "main": "server/src/index.js",
+  "main": "backend/src/index.js",
   "scripts": {
-    "client": "cd client && npm install && npm run start",
-    "server": "cd server && npm install && npm run dev",
-    "start": "cd server && npm install && npm run start",
-    "build": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "frontend": "cd frontend && npm install && npm run start",
+    "backend": "cd backend && npm install && npm run dev",
+    "start": "cd backend && npm install && npm run start",
+    "build": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "keywords": [],
   "author": "",
