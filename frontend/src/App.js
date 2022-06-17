@@ -1,234 +1,39 @@
-import './App.css';
-import React, {Component} from "react";
-import { Routes, Route, Link } from 'react-router-dom';
+// @ts-nocheck
+import React, { Component } from 'react';
+import { ThemeProvider } from '@material-ui/core/styles';
 
+//Redux
+import { Provider } from 'react-redux';
+import store from './store';
+import { loadUser } from './store/actions';
 
-import Films from './components/films/films';
-//import AboutUs from './components/aboutUs/aboutUs';
-import Contacts from './components/contacts/contacts';
-import Login from './components/login/login';
-import Main from './components/main/main';
-import { ReactComponent as Logo } from './images/TAKFLIX_logo.svg';
-import { FullAfishaFilm } from './components/afisha/fullAfishaFilm';
-import Afisha from './components/afisha/afisha';
-import AboutUs from './components/aboutUs/aboutUs';
-import MainFilms from './components/main/mainFilms';
+import theme from './theme';
+import { Alert } from './components';
+import { pageCursors } from './utils';
+import Routes from './Routes';
+
+import './assets/scss/index.scss';
+import "@fontsource/montserrat";
+import { CssBaseline } from '@material-ui/core';
 
 class App extends Component {
-//function App() {
-
+  componentDidMount() {
+    store.dispatch(loadUser());
+    pageCursors();
+  }
   render() {
     return (
-
-              <div className="containerGrid">
-                
-                  <div className="item1">
-                      <nav>
-                          <ul className="topmenu">
-
-
-                              <li>
-                                <div className='logo'>
-                                  <Logo width="12rem" />
-                                </div>
-                              </li>
-
-                              <li>
-                                <div className='spece'>
-
-                                </div>
-                              </li>
-
-
-
-                              <li>
-                                  <Link to='/'>
-                                      Головна
-                                  </Link>
-                              </li>
-  
-                              <li>
-                                  <Link to='/contacts'>
-                                      Про нас
-                                  </Link>
-                              </li>
-  
-                              <li>
-                                  <Link to='/films'>
-                                      Фільми
-                                  </Link>
-                              </li>
-  
-                              <li>
-                                  <Link to='/login'>
-                                      Увійти
-                                  </Link>
-                              </li>
-
-
-
-
-  
-                            {/* 
-                              <li id="BT">
-  
-                                  <div className="container-out">
-                                      <div className="container-in">
-                                          <div className="search-container">
-                                              <div className="search-engine">
-                                                  <input
-                                                      type="input"
-                                                      id="search-input"
-                                                      autoComplete="off"
-                                                      placeholder="Пошук"
-                                                  />
-                                              </div>
-                                              {<div id="search-results"></div>}
-                                              {<div id="search-data"></div>}
-                                          </div>
-                                      </div>
-                                  </div>
-                              </li>
-                            */}
-
-
-
-                          </ul>
-                      </nav>
-  
-  
-                  </div>
-                  <div className="item2">
-  
-                      <Routes>
-                          
-                        <Route path='/' element = { <Main/> }>  
-
-                          <Route 
-                            index 
-                            element={ <MainFilms/> } 
-                          />
-
-                          <Route 
-                            path='*' 
-                            element={ <MainFilms/> } 
-                          />                        
-
-                          <Route
-                            path=':id'
-                            element = { <FullAfishaFilm/> } 
-                          />  
-
-                        </Route>
-
-
-
-                          {/* <Route path='/' element={ <Main/> } /> */}
-                            
-                          
-                          <Route
-                            path='/contacts'
-                            element = { <AboutUs/> } 
-                          />  
-  
-
-                          {/* <Route
-                            path='/films/'
-                            element = { <Films/> }
-                            // element = { <FullFilm/> }
-                          />   */}
-  
-
-
-                          {/* <Route path='/login/' element = { <Login/> }>  
-
-                              <Route 
-                                index 
-                                element={ <Afisha/> } 
-                              />
-
-                              <Route 
-                                path='*' 
-                                element={ <Afisha/> } 
-                              />                        
-
-                              <Route
-                                path=':id'
-                                element = { <FullAfishaFilm/> } 
-                              />  
-
-                          </Route> */}
-
-
-                        <Route path='/films/' element = { <Films/> }>  
-
-                          <Route 
-                            index 
-                            element={ <Afisha/> } 
-                          />
-
-                          <Route 
-                            path='*' 
-                            element={ <Afisha/> } 
-                          />                        
-
-                          <Route
-                            path=':id'
-                            element = { <FullAfishaFilm/> } 
-                          />  
-
-                        </Route>
-
-
-
-                          <Route
-                            path='/login/'
-                            element = { <Login/> }
-                          />  
-
-
-
-
-
-
-
-
-                          {/* <Route
-                            path='/full-user'
-                            element = { <FullFilm/> } 
-                          />  */}
-
-  
-                          {/* <Route path={"/contacts"}>
-                            <Contacts/>
-                          </Route>
-                               
-                             
-                          <Route path={"/films"}>
-                            <Films/>
-                          </Route>
-                        
-                          <Route path={"/login"}>
-                            <Login/>
-                          </Route>
-                               */}
-                       
-  
-  
-                      </Routes>
-  
-  
-                  </div>
-                  <div className="item3">
-                      <div>
-                        Footer
-                      </div>
-                  </div>
-  
-              </div>
- 
+      <Provider store={store}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Alert />
+          <Routes />
+          <div className="cursor" id="cursor" />
+          <div className="cursor2" id="cursor2" />
+          <div className="cursor3" id="cursor3" />
+        </ThemeProvider>
+      </Provider>
     );
   }
 }
-
 export default App;
